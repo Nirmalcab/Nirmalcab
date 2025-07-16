@@ -371,15 +371,15 @@
     const travelTime = document.getElementById('travelTime').value.trim();
 
     const message =
-        `*🚖 Nirmal Cab Booking Request 🚖*\n` +
-        `------------------------------\n` +
-        `*Name:* ${name}\n` +
-        `*Phone:* ${phone}\n` +
-        `*Pickup City:* ${pickup}\n` +
-        `*Drop City:* ${drop}\n` +
-        `*Travel Date:* ${travelDate}\n` +
-        `*Travel Time:* ${travelTime}\n` +
-        `------------------------------`;
+    "*🚖 Nirmal Cab Booking Request 🚖*\n" +
+    "--------------------------------\n" +
+    "*Name:* " + name + "\n" +
+    "*Phone:* " + phone + "\n" +
+    "*Pickup City:* " + pickup + "\n" +
+    "*Drop City:* " + drop + "\n" +
+    "*Travel Date:* " + travelDate + "\n" +
+    "*Travel Time:* " + travelTime + "\n" +
+    "--------------------------------";
 
     const whatsappURL = "https://wa.me/917567291407?text=" + encodeURIComponent(message);
     window.open(whatsappURL, "_blank");
