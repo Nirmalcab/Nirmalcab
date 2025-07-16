@@ -208,7 +208,7 @@
     const name = document.getElementById('custName').value.trim();
     const phone = document.getElementById('custPhone').value.trim();
     const yourNumber = "917567291407"; // Your WhatsApp number with country code
-    const message = `Hello, I am ${name}. Please call me back on ${phone}.`;
+    const message = `Hello, ${name}. Please call me back for cab booking ${phone}.`;
     const whatsappUrl = `https://wa.me/${yourNumber}?text=${encodeURIComponent(message)}`;
 
     window.open(whatsappUrl, "_blank");
