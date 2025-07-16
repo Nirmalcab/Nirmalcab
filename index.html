@@ -196,6 +196,20 @@
 </div>
 
 <script>
+
+
+  const message =
+    "*🚖 Nirmal Cab Booking Request 🚖*%0A" +
+    "----------------------------%0A" +
+    "*Car:* " + carName + "%0A" +
+    "*Name:* " + name + "%0A" +
+    "*Phone:* " + phone + "%0A" +
+    "*Travel Date:* " + travelDate + "%0A" +
+    "----------------------------";
+
+  const whatsappURL = "https://wa.me/917567291407?text=" + encodeURIComponent(message);
+  window.open(whatsappURL, "_blank");
+}
   function openForm() {
     document.getElementById('popupForm').style.display = 'block';
   }
@@ -208,7 +222,13 @@
     const name = document.getElementById('custName').value.trim();
     const phone = document.getElementById('custPhone').value.trim();
     const yourNumber = "917567291407"; // Your WhatsApp number with country code
-    const message = `Hello, ${name}. Please call me back for cab booking ${phone}.`;
+
+    if (name === "" || phone === "") {
+      alert("Please fill in both fields.");
+      return;
+    }
+
+    const message = `Hello, I am ${name}. Please call me back on ${phone}.`;
     const whatsappUrl = `https://wa.me/${yourNumber}?text=${encodeURIComponent(message)}`;
 
     window.open(whatsappUrl, "_blank");
@@ -352,6 +372,9 @@
         <div class="action-buttons">
           <a href="tel:7567291407"><button class="call-btn">Call</button></a>
           <a href="javascript:void(0);" onclick="sendCarBooking('Innova Crysta')"><button class="whatsapp-btn">WhatsApp</button></a>
+        </div>
+      </div>
+    </div>
   </div> <script>
   function sendWhatsApp() {
     const name = document.getElementById('custName').value.trim();
@@ -378,15 +401,6 @@
 </script>
 
 
-    function sendCarBooking(carName) {
-      const name = document.getElementById('custName').value.trim();
-      const phone = document.getElementById('custPhone').value.trim();
-      const travelDate = document.getElementById('travelDate').value.trim();
-
-      if (!name || !phone || !travelDate) {
-        alert("Please fill your name, phone number, and travel date in the form.");
-        return;
-      }
 
       const message =
         "*🚖 Nirmal Cab Booking Request 🚖*\n" +
@@ -601,3 +615,26 @@
     </p>
   </div>
 </html>
+<script>
+function sendCarBooking(carName) {
+  const name = document.getElementById('custName').value.trim();
+  const phone = document.getElementById('custPhone').value.trim();
+  const travelDate = document.getElementById('travelDate').value.trim();
+
+  if (!name || !phone || !travelDate) {
+    alert("Please fill your name, phone number, and travel date in the form.");
+    return;
+  }
+
+  const message = `*🚖 Nirmal Cab Booking Request 🚖*
+----------------------------
+*Car:* ${carName}
+*Name:* ${name}
+*Phone:* ${phone}
+*Travel Date:* ${travelDate}
+----------------------------`;
+
+  const whatsappURL = "https://wa.me/917567291407?text=" + encodeURIComponent(message);
+  window.open(whatsappURL, "_blank");
+}
+</script>
