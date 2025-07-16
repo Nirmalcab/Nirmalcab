@@ -209,11 +209,6 @@
     const phone = document.getElementById('custPhone').value.trim();
     const yourNumber = "917567291407"; // Your WhatsApp number with country code
 
-    if (name === "" || phone === "") {
-      alert("Please fill in both fields.");
-      return;
-    }
-
     const message = `Hello, I am ${name}. Please call me back on ${phone}.`;
     const whatsappUrl = `https://wa.me/${yourNumber}?text=${encodeURIComponent(message)}`;
 
