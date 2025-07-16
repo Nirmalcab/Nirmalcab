@@ -361,28 +361,35 @@
         </div>
       </div>
     </div>
-  </div>  <script>
-    function sendWhatsApp() {
+  </div> <script>
+  function sendWhatsApp() {
     const name = document.getElementById('custName').value.trim();
-const phone = document.getElementById('custPhone').value.trim();
-      const pickup = document.getElementById('pickup').value.trim();
-      const drop = document.getElementById('drop').value.trim();
-      const travelDate = document.getElementById('travelDate').value.trim();
-const travelTime = document.getElementById('travelTime').value.trim();
-      const message =
-        "*🚖 Nirmal Cab Booking Request 🚖*%0A" +
-        "----------------------------%0A" +
-        "*Name:* " + name + "%0A" +
-        "*Phone:* " + phone + "%0A" +
-        "*Pickup City:* " + pickup + "%0A" +
-        "*Drop City:* " + drop + "%0A" +
-        "*Travel Date:* " + travelDate + "%0A" +
-        "*Travel Time:* " + travelTime + "%0A" +
-        "----------------------------";
+    const phone = document.getElementById('custPhone').value.trim();
+    const pickup = document.getElementById('pickup').value.trim();
+    const drop = document.getElementById('drop').value.trim();
+    const travelDate = document.getElementById('travelDate').value.trim();
+    const travelTime = document.getElementById('travelTime').value.trim();
 
-      const whatsappURL = "https://wa.me/917567291407?text=" + message;
-      window.open(whatsappURL, "_blank");
+    if (!name || !phone) {
+      alert("Please enter your name and phone number.");
+      return;
     }
+
+    const message =
+      "*🚖 Nirmal Cab Booking Request 🚖*%0A" +
+      "----------------------------------%0A" +
+      "*Name:* " + name + "%0A" +
+      "*Phone:* " + phone + "%0A" +
+      "*Pickup City:* " + pickup + "%0A" +
+      "*Drop City:* " + drop + "%0A" +
+      "*Travel Date:* " + travelDate + "%0A" +
+      "*Travel Time:* " + travelTime + "%0A" +
+      "----------------------------------";
+
+    const whatsappURL = "https://wa.me/917567291407?text=" + encodeURIComponent(message);
+    window.open(whatsappURL, "_blank");
+  }
+</script>
 
     function sendCarBooking(carName) {
       const travelDate = document.getElementById('travelDate').value.trim();
