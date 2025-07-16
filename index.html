@@ -188,9 +188,9 @@
 <div id="popupForm" style="display:none; position:fixed; top:20%; left:50%; transform:translate(-50%, 0); background:#fff; padding:20px; border:2px solid #333; border-radius:10px; z-index:1000;">
   <h3>Request a Call Back</h3>
   <label>Name:</label>
-  <input type="text" id="custName" placeholder="Enter your name" style="display:block; margin-bottom:10px; width:100%;" />
+  <input type="text" id="popupName" placeholder="Enter your name" style="display:block; margin-bottom:10px; width:100%;" />
   <label>Phone Number:</label>
-  <input type="text" id="custPhone" placeholder="Enter your phone number" style="display:block; margin-bottom:10px; width:100%;" />
+  <input type="text" id="popupPhone" placeholder="Enter your phone number" style="display:block; margin-bottom:10px; width:100%;" />
   <button onclick="sendWhatsAppMessage()">Send via WhatsApp</button>
   <button onclick="closeForm()" style="margin-left:10px;">Cancel</button>
 </div>
@@ -223,10 +223,10 @@
 </script>
 <!-- Name and Phone Number Field (Pickup ke upar) -->
 <label for="name">Your Name:</label>
-<input type="text" id="popupName" placeholder="Enter your name" style="display:block; margin-bottom:10px; width:100%;" />
+<input type="text" id="custName" placeholder="Enter your name" required style="margin-bottom: 10px; width: 100%;" />
 
 <label for="phone">Your Phone Number:</label>
-<input type="text" id="popupPhone" placeholder="Enter your phone number" style="display:block; margin-bottom:10px; width:100%;" />
+<input type="tel" id="custPhone" placeholder="Enter your phone number" pattern="[0-9]{10}" maxlength="10" required style="margin-bottom: 20px; width: 100%;" />
 
   <label for="pickup">Pickup City:</label>
   <input list="cities" id="pickup" required>
@@ -371,21 +371,44 @@
     const travelTime = document.getElementById('travelTime').value.trim();
 
     const message =
-    "*🚖 Nirmal Cab Booking Request 🚖*\n" +
-    "--------------------------------\n" +
-    "*Name:* " + name + "\n" +
-    "*Phone:* " + phone + "\n" +
-    "*Pickup City:* " + pickup + "\n" +
-    "*Drop City:* " + drop + "\n" +
-    "*Travel Date:* " + travelDate + "\n" +
-    "*Travel Time:* " + travelTime + "\n" +
-    "--------------------------------";
-     const whatsappURL = "https://wa.me/917567291407?text=" + encodeURIComponent(message);
+        `*🚖 Nirmal Cab Booking Request 🚖*\n` +
+        `------------------------------\n` +
+        `*Name:* ${name}\n` +
+        `*Phone:* ${phone}\n` +
+        `*Pickup City:* ${pickup}\n` +
+        `*Drop City:* ${drop}\n` +
+        `*Travel Date:* ${travelDate}\n` +
+        `*Travel Time:* ${travelTime}\n` +
+        `------------------------------`;
+
+    const whatsappURL = "https://wa.me/917567291407?text=" + encodeURIComponent(message);
     window.open(whatsappURL, "_blank");
 }
 </script>
 
+
     function sendCarBooking(carName) {
+      const name = document.getElementById('custName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      const travelDate = document.getElementById('travelDate').value.trim();
+
+      if (!name || !phone || !travelDate) {
+        alert("Please fill your name, phone number, and travel date in the form.");
+        return;
+      }
+
+      const message =
+        "*🚖 Nirmal Cab Booking Request 🚖*\n" +
+        "----------------------------\n" +
+        "*Car:* " + carName + "\n" +
+        "*Name:* " + name + "\n" +
+        "*Phone:* " + phone + "\n" +
+        "*Travel Date:* " + travelDate + "\n" +
+        "----------------------------";
+
+      const whatsappURL = "https://wa.me/917567291407?text=" + encodeURIComponent(message);
+      window.open(whatsappURL, "_blank");
+    }
       const travelDate = document.getElementById('travelDate').value.trim();
       if (!travelDate) {
         alert("Please enter your Travel Date in the form first.");
