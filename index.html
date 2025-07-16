@@ -7,6 +7,64 @@
 <meta name="keywords" content="cab, taxi booking, cab service, online cab, cab in India, Nirmal cab">
 <meta name="robots" content="index, follow">
   <style>
+<style>
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 10px 20px;
+  border-bottom: 2px solid #ffcc00;
+}
+
+.top-header .left {
+  display: flex;
+  align-items: center;
+}
+
+.top-header .logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.top-header .text h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.top-header .text p {
+  margin: 0;
+  font-size: 12px;
+  color: #444;
+}
+
+.top-header .right {
+  text-align: right;
+}
+
+.top-header .phone {
+  font-size: 16px;
+  font-weight: bold;
+  color: #0077cc;
+  margin-bottom: 5px;
+}
+
+.top-header .phone-icon {
+  margin-right: 5px;
+}
+
+.call-back-btn {
+  background: #111c30;
+  color: white;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+}
     body {
       font-family: Arial, sans-serif;
       background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -109,6 +167,23 @@
   </style>
 </head>
 <body>
+<!-- Top Header Section -->
+<div class="top-header">
+  <div class="left">
+    <img src="logo.png" alt="NirmalCab Logo" class="logo" />
+    <div class="text">
+      <h2>NirmalCab</h2>
+      <p>Best Cab for All Destination</p>
+    </div>
+  </div>
+  <div class="right">
+    <div class="phone">
+      <span class="phone-icon">📞</span>
+      <a href="tel:7567291407">+91 7567291407</a>
+    </div>
+    <button class="call-back-btn">Request Call Back</button>
+  </div>
+</div>
   <div class="form-container">
     <h2>Nirmal Cab - Book Your Ride</h2>
     <form onsubmit="sendWhatsApp(); return false;">
