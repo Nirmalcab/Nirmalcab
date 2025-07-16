@@ -184,12 +184,43 @@
     <button class="call-back-btn" onclick="openForm()">Request Call Back</button>
   </div>
 </div>
-  <div class="form-container">
-    <h2>Nirmal Cab - Book Your Ride</h2>
-    <form onsubmit="sendWhatsApp(); return false;">
-      <label for="name">Name:</label>
-      <input type="text" id="name" required><label for="phone">Phone Number:</label>
-  <input type="tel" id="phone" pattern="[0-9]{10}" maxlength="10" required>
+  <!-- Popup Form -->
+<div id="popupForm" style="display:none; position:fixed; top:20%; left:50%; transform:translate(-50%, 0); background:#fff; padding:20px; border:2px solid #333; border-radius:10px; z-index:1000;">
+  <h3>Request a Call Back</h3>
+  <label>Name:</label>
+  <input type="text" id="custName" placeholder="Enter your name" style="display:block; margin-bottom:10px; width:100%;" />
+  <label>Phone Number:</label>
+  <input type="text" id="custPhone" placeholder="Enter your phone number" style="display:block; margin-bottom:10px; width:100%;" />
+  <button onclick="sendWhatsAppMessage()">Send via WhatsApp</button>
+  <button onclick="closeForm()" style="margin-left:10px;">Cancel</button>
+</div>
+
+<script>
+  function openForm() {
+    document.getElementById('popupForm').style.display = 'block';
+  }
+
+  function closeForm() {
+    document.getElementById('popupForm').style.display = 'none';
+  }
+
+  function sendWhatsAppMessage() {
+    const name = document.getElementById('custName').value.trim();
+    const phone = document.getElementById('custPhone').value.trim();
+    const yourNumber = "917567291407"; // Your WhatsApp number with country code
+
+    if (name === "" || phone === "") {
+      alert("Please fill in both fields.");
+      return;
+    }
+
+    const message = `Hello, I am ${name}. Please call me back on ${phone}.`;
+    const whatsappUrl = `https://wa.me/${yourNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappUrl, "_blank");
+    closeForm();
+  }
+</script>
 
   <label for="pickup">Pickup City:</label>
   <input list="cities" id="pickup" required>
