@@ -6,7 +6,19 @@
 <meta name="description" content="Book safe, reliable, and affordable cabs in India. Local and outstation taxi booking. 24/7 service. Nirmal Cab.">
 <meta name="keywords" content="cab, taxi booking, cab service, online cab, cab in India, Nirmal cab">
 <meta name="robots" content="index, follow">
-  <style>
+  <style>/* phone number background strip */
+.phone-bg {
+  background: rgba(0, 0, 0, 0.85);  /* 👈 black strip */
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.phone-bg a {
+  color: #ffffff;       /* 👈 white number text */
+  text-decoration: none;
+  font-weight: 600;
+}
 <style>
 .top-header {
   display: flex;
@@ -179,6 +191,7 @@
   <div class="right">
     <div class="phone">
       <span class="phone-icon">📞</span>
+       <div class="phone-bg">
       <a href="tel:7567291407">+91 7567291407</a>
     </div>
     <button class="call-back-btn" onclick="openForm()">Request Call Back</button>
