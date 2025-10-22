@@ -19,6 +19,52 @@
   text-decoration: none;
   font-weight: 600;
 }
+/* ===== MENU BAR STYLING ===== */
+.menu-container {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  z-index: 1000;
+}
+
+.menu-icon {
+  font-size: 35px;
+  color: #00e676;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: none;
+  list-style: none;
+  background: rgba(0, 0, 0, 0.85);
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  border-radius: 20px;
+  padding: 50px 50px;
+}
+
+.nav-menu.active {
+  display: block;
+}
+
+.nav-menu li {
+  margin: 20px 0;
+}
+
+.nav-menu a {
+  color: #00e676;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 30px;
+}
+#contact img {
+  transition: transform 0.2s ease;
+  filter: drop-shadow(0 0 5px rgba(255,255,255,0.4));
+}
+#contact img:hover {
+  transform: scale(1.2);
+}
 <style>
 .top-header {
   display: flex;
@@ -176,11 +222,74 @@
         height: 140px;
       }
     }
+    /* ===== About Section CSS ===== */
+html { scroll-behavior: smooth; }
+
+.about-section {
+  max-width: 900px;
+  margin: 60px auto;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 30px;
+  border-radius: 15px;
+  color: white;
+  line-height: 1.6;
+}
+
+.about-section h2 {
+  text-align: center;
+  color: #00e676;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.about-section h3 {
+  color: #00e676;
+  margin-top: 30px;
+  font-size: 22px;
+  border-bottom: 2px solid #00e676;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.about-category {
+  margin-top: 20px;
+}
+
+.about-category h4 {
+  color: #00e676;
+  margin-bottom: 8px;
+}
+
+.about-category ul {
+  list-style: none;
+  padding-left: 15px;
+}
+
+.about-category ul li::before {
+  content: "✔ ";
+  color: #00e676;
+}
+
+.about-category p {
+  color: #f2f2f2;
+  margin-top: 5px;
+}
   </style>
 </head>
 <body>
+  <!-- ==== MENU BAR ==== -->
+<div class="menu-container">
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  <ul class="nav-menu" id="navMenu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#roundtrip">Round Trip</a></li>
+    <li><a href="#about">About Us</a></li>
+  </ul>
+</div>
 <!-- Top Header Section -->
 <div class="top-header">
+<nav 
+</nav>
   <div class="left">
     <img src="image-5.png" alt="NirmalCab Logo" class="logo" />
     <div class="text">
@@ -192,9 +301,10 @@
     <div class="phone">
       <span class="phone-icon">📞</span>
        <div class="phone-bg">
-      <a href="tel:7567291407">+91 7567291407</a>
+      <a href="tel:9726662197">+91 9726662197</a>
     </div>
     <button class="call-back-btn" onclick="openForm()">Request Call Back</button>
+</h3>
   </div>
 </div>
   <!-- Popup Form -->
@@ -215,13 +325,13 @@
   }
 
   function closeForm() {
-    document.getElementById('popupForm').style.display = 'none';
+    document.getElementById('popupForm')..display = 'none';
   }
 
   function sendWhatsAppMessage() {
     const name = document.getElementById('popupName').value.trim();
 const phone = document.getElementById('popupPhone').value.trim();
-    const yourNumber = "917567291407"; // Your WhatsApp number with country code
+    const yourNumber = "919726662197"; // Your WhatsApp number with country code
 
     if (name === "" || phone === "") {
       alert("Please fill in both fields.");
@@ -235,6 +345,8 @@ const phone = document.getElementById('popupPhone').value.trim();
     closeForm();
   }
 </script>
+<!-- Page anchors for top navigation -->
+<div id="home"></div>        <!-- Home anchor (form start) -->
 <!-- Name and Phone Number Field (Pickup ke upar) -->
 <label for="name">Your Name:</label>
 <input type="text" id="custName" placeholder="Enter your name" required style="margin-bottom: 10px; width: 100%;" />
@@ -311,7 +423,7 @@ const phone = document.getElementById('popupPhone').value.trim();
   <button type="button" onclick="sendWhatsApp()">Book on WhatsApp</button>
 </form>
 
-<a href="tel:7567291407">
+<a href="tel:9726662197">
   <button>📞 Call Now</button>
 </a>
 
@@ -322,7 +434,7 @@ const phone = document.getElementById('popupPhone').value.trim();
         <img src="dzire.jpg"> 
         <div class="car-name">Swift Dzire</div>
         <div class="action-buttons">
-          <a href="tel:7567291407"><button class="call-btn">Call</button></a>
+          <a href="tel:9726662197"><button class="call-btn">Call</button></a>
           <a href="javascript:void(0);" onclick="sendCarBooking('Swift Dzire')"><button class="whatsapp-btn">WhatsApp</button></a>
         </div>
       </div>
@@ -330,7 +442,7 @@ const phone = document.getElementById('popupPhone').value.trim();
         <img src="etios.jpg">
         <div class="car-name">Toyota Etios</div>
         <div class="action-buttons">
-          <a href="tel:7567291407"><button class="call-btn">Call</button></a>
+          <a href="tel:9726662197"><button class="call-btn">Call</button></a>
           <a href="javascript:void(0);" onclick="sendCarBooking('Toyota Etios')"><button class="whatsapp-btn">WhatsApp</button></a>
         </div>
       </div>
@@ -338,7 +450,7 @@ const phone = document.getElementById('popupPhone').value.trim();
         <img src="ciaz.jpg">
         <div class="car-name">Maruti Ciaz</div>
         <div class="action-buttons">
-          <a href="tel:7567291407"><button class="call-btn">Call</button></a>
+          <a href="tel:9726662197"><button class="call-btn">Call</button></a>
           <a href="javascript:void(0);" onclick="sendCarBooking('Maruti Ciaz')"><button class="whatsapp-btn">WhatsApp</button></a>
         </div>
       </div>
@@ -346,7 +458,7 @@ const phone = document.getElementById('popupPhone').value.trim();
         <img src="amaze.jpg">
         <div class="car-name">Honda Amaze</div>
         <div class="action-buttons">
-          <a href="tel:7567291407"><button class="call-btn">Call</button></a>
+          <a href="tel:9726662197"><button class="call-btn">Call</button></a>
           <a href="javascript:void(0);" onclick="sendCarBooking('Honda Amaze')"><button class="whatsapp-btn">WhatsApp</button></a>
         </div>
       </div>
@@ -354,7 +466,7 @@ const phone = document.getElementById('popupPhone').value.trim();
         <img src="innova.jpg">
         <div class="car-name">Toyota Innova</div>
         <div class="action-buttons">
-          <a href="tel:7567291407"><button class="call-btn">Call</button></a>
+          <a href="tel:9726662197"><button class="call-btn">Call</button></a>
           <a href="javascript:void(0);" onclick="sendCarBooking('Toyota Innova')"><button class="whatsapp-btn">WhatsApp</button></a>
         </div>
       </div>
@@ -362,7 +474,7 @@ const phone = document.getElementById('popupPhone').value.trim();
         <img src="ertiga.jpg">
         <div class="car-name">Maruti Suzuki Ertiga</div>
         <div class="action-buttons">
-          <a href="tel:7567291407"><button class="call-btn">Call</button></a>
+          <a href="tel:9726662197"><button class="call-btn">Call</button></a>
           <a href="javascript:void(0);" onclick="sendCarBooking('Maruti Suzuki Ertiga')"><button class="whatsapp-btn">WhatsApp</button></a>
         </div>
       </div>
@@ -370,7 +482,7 @@ const phone = document.getElementById('popupPhone').value.trim();
         <img src="crysta.jpg">
         <div class="car-name">Innova Crysta</div>
         <div class="action-buttons">
-          <a href="tel:7567291407"><button class="call-btn">Call</button></a>
+          <a href="tel:9726662197"><button class="call-btn">Call</button></a>
           <a href="javascript:void(0);" onclick="sendCarBooking('Innova Crysta')"><button class="whatsapp-btn">WhatsApp</button></a>
         </div>
       </div>
@@ -395,9 +507,28 @@ const phone = document.getElementById('popupPhone').value.trim();
         `*Travel Time:* ${travelTime}\n` +
         `------------------------------`;
 
-    const whatsappURL = "https://wa.me/917567291407?text=" + encodeURIComponent(message);
+    const whatsappURL = "https://wa.me/919726662197?text=" + encodeURIComponent(message);
     window.open(whatsappURL, "_blank");
 }
+</script>
+<script>
+function toggleMenu() {
+  const navMenu = document.getElementById("navMenu");
+  navMenu.classList.toggle("active");
+}
+
+// Menu link pe click karne ke baad close karne ke liye
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll(".nav-menu a");
+  const navMenu = document.getElementById("navMenu");
+
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active"); // menu close hoga
+    });
+  });
+});
+</script>
 </script>
   </script></body>
   <!-- About Us Section -->
@@ -534,76 +665,82 @@ const phone = document.getElementById('popupPhone').value.trim();
   </style>
 </head>
 <body>
-  <!-- existing content above -->  <!-- About Section -->  <div class="about-section">
-    <h2>About Us</h2><div class="about-point">
-  <div><strong>Cabs for Every Pocket</strong><br>One of the cost effective and value for the money service providers.</div>
-</div>
 
-<div class="about-point">
-  <div><strong>Nirmal cab Select</strong><br>We provide cab services at any time day or night with secure procedure.</div>
-</div>
 
-<div class="about-point">
-  <div><strong>Share and Express</strong><br>All our rental cars are New and well maintained and are driven by well educated very courteous drivers.</div>
-</div>
+<!-- ABOUT US SECTION -->
+<div class="about-section" id="about">
+  <h2>About Us</h2>
 
-<div class="about-point">
-  <div><strong>Secure and Safer Rides</strong><br>Our professional and well-trained driver with mobile phone and are well aware of all roads in around overall India.</div>
-</div>
+  <h3>Our Cab Rental Services</h3>
 
-<div class="about-point">
-  <div><strong>In Cab Entertainment</strong><br>Service safety with sophistication are our speciality.</div>
-</div>
-
-<div class="about-point">
-  <div><strong>Cashless Rides</strong><br>From Sedans and SUVs to Luxury cars for special occasions, we have cabs to suit every pocket.</div>
-</div>
-
-<div class="about-point">
-  <div><strong>No Limits</strong><br>Drive as much as you want with unlimited kms. Just like your own car!</div>
-</div>
-
-<div class="about-point">
-  <div><strong>Booking in 2 Minutes</strong><br>No hassle of uploading your driving license and waiting for its approval. Easy enough!</div>
-</div>
-
-<h3>Book your ride with Nirmal Cab today and enjoy a smooth, comfortable, and cost-effective journey anywhere in India!</h3>
-
-  </div></body>
-</html>
-    </p>
+  <div class="about-category">
+    <h4>Airport Transfers</h4>
+    <ul>
+      <li>Reliable pick-up and drop services for all Mumbai airports with flight tracking</li>
+      <li>Meet &amp; greet service available</li>
+      <li>Waiting time included</li>
+      <li>24/7 availability</li>
+    </ul>
   </div>
-</body>
-</html>
-<!-- Contact Section -->
-  <div style="max-width: 800px; margin: 0 auto 40px; background-color: rgba(0, 0, 0, 0.85); padding: 20px; border-radius: 10px; text-align: center;">
-    <h2 style="color: #00e676;">Contact</h2>
-    <p style="font-size: 16px; line-height: 1.6;">
-      📞 Call us at: <a href="tel:7567291407" style="color: #00e676; text-decoration: underline;">+91 75672 91407</a><br/>
-      💬 WhatsApp: <a href="https://wa.me/917567291407" target="_blank" style="color: #00e676; text-decoration: underline;">Click to Chat</a>
-    </p>
+
+  <div class="about-category">
+    <h4>Corporate Travel</h4>
+    <ul>
+      <li>Professional chauffeur services for business travelers</li>
+      <li>Monthly contracts available</li>
+      <li>Executive car fleet</li>
+      <li>WiFi equipped vehicles</li>
+    </ul>
   </div>
-</html>
-<script>
-function sendCarBooking(carName) {
-  const name = document.getElementById('custName').value.trim();
-  const phone = document.getElementById('custPhone').value.trim();
-  const travelDate = document.getElementById('travelDate').value.trim();
 
-  if (!name || !phone || !travelDate) {
-    alert("Please fill your name, phone number, and travel date in the form.");
-    return;
-  }
+  <div class="about-category">
+    <h4>Special Occasions</h4>
+    <ul>
+      <li>Luxury transportation for weddings and events</li>
+      <li>Decorated vehicles</li>
+      <li>Bridal packages</li>
+      <li>Multiple vehicle coordination</li>
+    </ul>
+  </div>
 
-  const message = `*🚖 Nirmal Cab Booking Request 🚖*
-----------------------------
-*Car:* ${carName}
-*Name:* ${name}
-*Phone:* ${phone}
-*Travel Date:* ${travelDate}
-----------------------------`;
+  <div class="about-category">
+    <h4>City Tours</h4>
+    <ul>
+      <li>Explore Mumbai with our knowledgeable drivers</li>
+      <li>Half-day and full-day packages</li>
+      <li>Multi-lingual drivers</li>
+      <li>Customizable itineraries</li>
+    </ul>
+  </div>
 
-  const whatsappURL = "https://wa.me/917567291407?text=" + encodeURIComponent(message);
-  window.open(whatsappURL, "_blank");
-}
-</script>
+  <h3>Why Choose Us?</h3>
+
+  <div class="about-category">
+    <h4>No Hidden Costs</h4>
+    <p>All-inclusive pricing with no surprise charges. We provide detailed quotes upfront with breakdown of all costs including tolls, parking and waiting time.</p>
+  </div>
+
+  <div class="about-category">
+    <h4>Experienced Team</h4>
+    <p>Our drivers average 8+ years of driving experience with extensive local knowledge and defensive driving certifications.</p>
+  </div>
+
+  <div class="about-category">
+    <h4>Customized Services</h4>
+    <p>From child seats to special accessibility needs, we tailor every aspect of your ride. Our concierge team coordinates special requests.</p>
+  </div>
+
+  <div class="about-category">
+    <h4>Punctuality</h4>
+    <p>98% on-time performance with real-time tracking and proactive communication if any delays occur due to unforeseen circumstances.</p>
+  </div>
+
+  <div class="about-category">
+    <h4>Well-Maintained Fleet</h4>
+    <p>All vehicles undergo 150-point inspections weekly. We maintain a diverse fleet from economy sedans to luxury SUVs, all less than 3 years old.</p>
+  </div>
+
+  <h3>Our Commitment</h3>
+  <p>
+    We are committed to providing safe, comfortable, and enjoyable travel experiences at pocket-friendly rates.
+    All 
