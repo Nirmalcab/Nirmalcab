@@ -298,6 +298,79 @@ html { scroll-behavior: smooth; }
   color: #f2f2f2;
   margin-top: 5px;
 }
+/* ===== Trip Selector ===== */
+.trip-selector{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:10px;
+margin:25px 0;
+}
+
+.trip-option{
+display:flex;
+align-items:center;
+gap:8px;
+font-size:18px;
+font-weight:bold;
+color:white;
+white-space:nowrap;
+margin:0;
+padding:0;
+line-height:1;
+}
+
+.trip-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+.trip-option input[type="radio"]{
+width:22px;
+height:22px;
+accent-color:#00e676;
+margin:0;
+vertical-align:middle;
+}
+.airport-title{
+  background:#00e676;
+  color:#000;
+  font-weight:bold;
+  text-align:center;
+  padding:10px;
+  border-radius:8px;
+  margin-bottom:15px;
+}
+.airport-radio{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-bottom:15px;
+}
+
+.airport-option{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:0;
+  padding:0;
+}
+
+.airport-option input[type="radio"]{
+  width:22px;
+  height:22px;
+  margin:0;
+  accent-color:#00e676;
+}
+
+.airport-option span{
+  font-size:18px;
+  color:white;
+}
   </style>
 </head>
 <body>
@@ -305,11 +378,7 @@ html { scroll-behavior: smooth; }
 <div class="menu-container">
   <div class="menu-icon" onclick="toggleMenu()">☰</div>
   <ul class="nav-menu" id="navMenu">
-  <li><a href="#home">Home</a></li>
-  <li><a href="#oneway">Oneway Trip</a></li>
-  <li><a href="#roundtrip">Round Trip</a></li>
-  <li><a href="#airport">Airport</a></li>
-  <li><a href="#local">Local</a></li>
+  <li><a href="#bookingForm">Home</a></li>
   <li><a href="#about">About Us</a></li>
 </ul>
 </div>
@@ -374,8 +443,28 @@ const phone = document.getElementById('popupPhone').value.trim();
   }
 </script>
 <!-- Page anchors for top navigation -->
-<div id="home"></div>        <!-- Home anchor (form start) -->
-<!-- Name and Phone Number Field (Pickup ke upar) -->
+<div id="home"></div> 
+<!-- Trip Type Selector -->
+<div class="trip-selector">
+
+  <label class="trip-option">
+<input type="radio" name="tripType" checked onclick="showForm('oneway')">
+    <span>One Way</span>
+  </label>
+
+  <label class="trip-option">
+    <input type="radio" name="tripType" onclick="showForm('round')">
+    <span>Round Trip</span>
+  </label>
+
+  <label class="trip-option">
+    <input type="radio" name="tripType" onclick="showForm('airport')">
+    <span>Airport</span>
+  </label>
+
+</div>
+<div id="bookingForm"></div>
+<div id="oneWayForm">
 <label for="name">Your Name:</label>
 <input type="text" id="custName" placeholder="Enter your name" required style="margin-bottom: 10px; width: 100%;" />
 
@@ -454,6 +543,97 @@ const phone = document.getElementById('popupPhone').value.trim();
 <a href="tel:9726662197">
   <button>📞 Call Now</button>
 </a>
+</div>
+<div id="roundTripForm" style="display:none;">
+
+<label>Your Name:</label>
+<input type="text" id="rtName">
+
+<label>Your Phone Number:</label>
+<input type="tel" id="rtPhone">
+
+<label>Pickup City:</label>
+<input list="cities" id="rtPickup">
+
+<label>Drop City:</label>
+<input list="cities" id="rtDrop">
+
+<button type="button" onclick="addStop()">➕ Add Stop</button>
+
+<div id="stopContainer"></div>
+
+<label>Pickup Date:</label>
+<input type="date" id="rtPickupDate">
+
+<label>Pickup Time:</label>
+<input type="time" id="rtPickupTime">
+
+<label>Drop Date:</label>
+<input type="date" id="rtDropDate">
+
+<label>Drop Time:</label>
+<input type="time" id="rtDropTime">
+
+<button type="button" onclick="sendRoundTripWhatsApp()">
+Book Round Trip
+</button>
+
+<a href="tel:9726662197">
+<button type="button">📞 Call Now</button>
+</a>
+
+</div>
+<div id="airportForm" style="display:none;">
+
+<div class="airport-title">
+  TRIP TYPE
+</div>
+<div class="airport-radio">
+
+<label class="airport-option">
+<input type="radio"
+name="airportTrip"
+checked
+onclick="changeAirportType('to')">
+
+<span>Cab To Airport</span>
+</label>
+
+<label class="airport-option">
+<input type="radio"
+name="airportTrip"
+onclick="changeAirportType('from')">
+
+<span>Cab From Airport</span>
+</label>
+
+</div>
+
+<label id="airportLabel1">From City:</label>
+<input list="cities" id="airportFrom">
+
+<label id="airportLabel2">Airport:</label>
+<input type="text" id="airportTo"
+placeholder="Airport Name">
+
+<label>Pickup Date:</label>
+<input type="date" id="airportDate">
+
+<label>Pickup Time:</label>
+<input type="time" id="airportTime">
+
+<button type="button"
+onclick="sendAirportWhatsApp()">
+Book Airport Cab
+</button>
+
+<a href="tel:9726662197">
+<button type="button">
+📞 Call Now
+</button>
+</a>
+
+</div>
 
   </div>  <div class="car-section">
     <h2>POPULAR TAXI</h2>
@@ -558,7 +738,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 </script>
-  </script></body>
+  </body>
   <!-- About Us Section -->
 <!DOCTYPE html><html lang="en">
 <head>
@@ -698,7 +878,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <!-- ABOUT US SECTION -->
 <div class="about-section" id="about">
   <h2>About Us</h2>
-
+  
   <h3>Our Cab Rental Services</h3>
 
   <div class="about-category">
@@ -827,4 +1007,195 @@ function sendCarBooking(carName) {
   const whatsappURL = "https://wa.me/919726662197?text=" + encodeURIComponent(message);
   window.open(whatsappURL, "_blank");
 }
+
+function showForm(type){
+
+const oneWayForm =
+document.getElementById("oneWayForm");
+
+const roundTripForm =
+document.getElementById("roundTripForm");
+
+const airportForm =
+document.getElementById("airportForm");
+
+if(type==="round"){
+
+oneWayForm.style.display="none";
+roundTripForm.style.display="block";
+airportForm.style.display="none";
+
+}
+
+else if(type==="airport"){
+
+oneWayForm.style.display="none";
+roundTripForm.style.display="none";
+airportForm.style.display="block";
+
+}
+
+else{
+
+oneWayForm.style.display="block";
+roundTripForm.style.display="none";
+airportForm.style.display="none";
+
+}
+
+}
+
+function addStop(){
+
+const container =
+document.getElementById("stopContainer");
+
+const stopDiv =
+document.createElement("div");
+
+stopDiv.style.display = "flex";
+stopDiv.style.gap = "5px";
+stopDiv.style.marginTop = "10px";
+
+const input =
+document.createElement("input");
+
+input.setAttribute("list","cities");
+
+input.placeholder = "Enter Stop City";
+
+input.className = "stop-input";
+
+const removeBtn =
+document.createElement("button");
+
+removeBtn.innerHTML = "❌";
+
+removeBtn.style.width = "50px";
+
+removeBtn.onclick = function(){
+stopDiv.remove();
+};
+
+stopDiv.appendChild(input);
+stopDiv.appendChild(removeBtn);
+
+container.appendChild(stopDiv);
+
+}
+
+function sendRoundTripWhatsApp(){
+
+const message =
+`🚖 Round Trip Booking
+
+Name: ${document.getElementById("rtName").value}
+
+Phone: ${document.getElementById("rtPhone").value}
+
+Pickup: ${document.getElementById("rtPickup").value}
+
+Drop: ${document.getElementById("rtDrop").value}
+
+Pickup Date: ${document.getElementById("rtPickupDate").value}
+
+Pickup Time: ${document.getElementById("rtPickupTime").value}
+
+Drop Date: ${document.getElementById("rtDropDate").value}
+
+Drop Time: ${document.getElementById("rtDropTime").value}`;
+
+window.open(
+"https://wa.me/919726662197?text="+
+encodeURIComponent(message),
+"_blank"
+);
+
+}
+function changeAirportType(type){
+
+const label1 =
+document.getElementById("airportLabel1");
+
+const label2 =
+document.getElementById("airportLabel2");
+
+const field1 =
+document.getElementById("airportFrom");
+
+const field2 =
+document.getElementById("airportTo");
+
+if(type==="to"){
+
+label1.innerHTML = "From City:";
+label2.innerHTML = "Airport:";
+
+field1.placeholder =
+"Enter Pickup City";
+
+field2.placeholder =
+"Enter Airport Name";
+
+}
+
+else{
+
+label1.innerHTML = "Airport:";
+label2.innerHTML = "To City:";
+
+field1.placeholder =
+"Enter Airport Name";
+
+field2.placeholder =
+"Enter Destination City";
+
+}
+
+}
+function sendAirportWhatsApp(){
+
+const tripType =
+document.querySelector(
+'input[name="airportTrip"]:checked'
+).parentElement.innerText;
+
+const from =
+document.getElementById("airportFrom").value;
+
+const to =
+document.getElementById("airportTo").value;
+
+const date =
+document.getElementById("airportDate").value;
+
+const time =
+document.getElementById("airportTime").value;
+
+const message =
+
+`✈ Airport Booking
+
+Trip Type: ${tripType}
+
+From: ${from}
+
+To: ${to}
+
+Pickup Date: ${date}
+
+Pickup Time: ${time}`;
+
+window.open(
+"https://wa.me/919726662197?text=" +
+encodeURIComponent(message),
+"_blank"
+);
+
+}
 </script>
+      
+  
+        
+      
+  
