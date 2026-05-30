@@ -1085,6 +1085,13 @@ container.appendChild(stopDiv);
 }
 
 function sendRoundTripWhatsApp(){
+let stopsText = "";
+
+document.querySelectorAll(".stop-input").forEach((stop, index) => {
+  if (stop.value.trim() !== "") {
+    stopsText += `Stop ${index + 1}: ${stop.value}\n`;
+  }
+});
 
 const message =
 `🚖 Round Trip Booking
@@ -1096,7 +1103,7 @@ Phone: ${document.getElementById("rtPhone").value}
 Pickup: ${document.getElementById("rtPickup").value}
 
 Drop: ${document.getElementById("rtDrop").value}
-
+${stopsText}
 Pickup Date: ${document.getElementById("rtPickupDate").value}
 
 Pickup Time: ${document.getElementById("rtPickupTime").value}
@@ -1194,8 +1201,3 @@ encodeURIComponent(message),
 
 }
 </script>
-      
-  
-        
-      
-  
