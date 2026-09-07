@@ -1,12 +1,10 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
- <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Nirmal Cab - Book Affordable Taxi in Surat,Mumbai,Ahemdabad & All Over India</title>
+  <title>Nirmal Cab - Book Affordable Taxi in Surat, Mumbai, Ahmedabad & All Over India</title>
 
   <meta name="description" content="Book safe, reliable and affordable taxi service in Surat, Mumbai, Gujarat & all over India. Nirmal Cab offers local & outstation cab booking, one-way & round trip rides. 24/7 service available." />
 
@@ -26,151 +24,140 @@
 
   <!-- Favicon -->
   <link rel="icon" href="logo.png" type="image/png" />
-<link rel="icon" type="image/png" href="favicon.png">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18155598846"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'AW-18155598846');
-</script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-<!-- Event snippet for Contact conversion page -->
-<script>
-  gtag('event', 'conversion', {'send_to': 'AW-18155598846/2K1XCNbexeIcEP7nsdFD'});
-</script>
-
-</head>
-<meta name="robots" content="index, follow">
-  <style>/* phone number background strip */
-.phone-bg {
-  background: rgba(0, 0, 0, 0.85);  /* 👈 black strip */
-  display: inline-block;
-  padding: 4px 10px;
-  border-radius: 6px;
-}
-
-.phone-bg a {
-  color: #ffffff;       /* 👈 white number text */
-  text-decoration: none;
-  font-weight: 600;
-}
-/* ===== MENU BAR STYLING ===== */
-.menu-container {
-  position: absolute;
-  top: 30px;
-  right: 50px;
-  z-index: 1000;
-}
-
-.menu-icon {
-  font-size: 35px;
-  color: #00e676;
-  cursor: pointer;
-}
-
-.nav-menu {
-  display: none;
-  list-style: none;
-  background: rgba(0, 0, 0, 0.92);
-  position: absolute;
-  top: 60px;
-  right: 10px;
-  border-radius: 15px;
-  padding: 20px;
-  width: 220px;
-  text-align: center;
-}
-
-.nav-menu.active {
-  display: block;
-}
-
-.nav-menu li {
-  margin: 20px 0;
-}
-
-.nav-menu a {
-  color: #00e676;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 30px;
-}
-#contact img {
-  transition: transform 0.2s ease;
-  filter: drop-shadow(0 0 5px rgba(255,255,255,0.4));
-}
-#contact img:hover {
-  transform: scale(1.2);
-}
-<style>
-.top-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: white;
-  padding: 10px 20px;
-  border-bottom: 2px solid #ffcc00;
-}
-
-.top-header .left {
-  display: flex;
-  align-items: center;
-}
-
-.top-header .logo {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.top-header .text h2 {
-  margin: 0;
-  font-size: 20px;
-  color: #ffffff; /* white for NirmalCab */
-}
-
-.top-header .text p {
-  margin: 0;
-  font-size: 12px;
-  color: #dddddd; /* light gray for Best Cab for All Destination */
-}
-
-.top-header .right {
-  text-align: right;
-}
-
-.top-header .phone {
-  font-size: 16px;
-  font-weight: bold;
-  color: #0077cc;
-  margin-bottom: 5px;
-}
-
-.top-header .phone-icon {
-  margin-right: 5px;
-}
-
-.call-back-btn {
-  background: #111c30;
-  color: white;
-  padding: 6px 14px;
-  border: none;
-  border-radius: 3px;
-  font-weight: bold;
-  cursor: pointer;
-}
     body {
       font-family: Arial, sans-serif;
       background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center fixed;
       background-size: cover;
       color: white;
-      padding: 20px;
+      padding: 15px;
+      margin: 0;
     }
+
+    /* ===== TRANSPARENT HEADER BAR ===== */
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      background: transparent;
+      padding: 10px 5px 15px 5px;
+      border: none;
+      position: relative;
+    }
+
+    .top-header .left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .top-header .logo {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .top-header .text h2 {
+      margin: 0;
+      font-size: 20px;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    .top-header .text p {
+      margin: 2px 0 0 0;
+      font-size: 11px;
+      color: #dddddd;
+    }
+
+    .top-header .right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+
+    .top-header .right-top-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Phone number strip */
+    .phone-bg {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .phone-bg a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* 3 Lines Hamburger Menu */
+    .menu-icon {
+      font-size: 32px;
+      color: #00e676;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .nav-menu {
+      display: none;
+      list-style: none;
+      background: rgba(0, 0, 0, 0.95);
+      position: absolute;
+      top: 65px;
+      right: 10px;
+      border-radius: 12px;
+      padding: 15px 20px;
+      width: 200px;
+      text-align: center;
+      border: 1px solid #00e676;
+      z-index: 10000;
+    }
+
+    .nav-menu.active {
+      display: block;
+    }
+
+    .nav-menu li {
+      margin: 15px 0;
+    }
+
+    .nav-menu a {
+      color: #00e676;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 20px;
+      display: block;
+    }
+
+    /* Request Call Back Full Strip Button */
+    .call-back-btn {
+      background: #111c30;
+      color: white;
+      padding: 10px 14px;
+      border: 1px solid #233554;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+      font-size: 15px;
+    }
+
     .form-container {
       max-width: 450px;
       margin: auto;
@@ -178,14 +165,17 @@
       padding: 25px;
       border-radius: 12px;
     }
+
     h2 {
       text-align: center;
       color: #00e676;
     }
+
     label {
       display: block;
       margin-top: 12px;
     }
+
     input, button {
       width: 100%;
       padding: 10px;
@@ -193,7 +183,9 @@
       border-radius: 6px;
       border: none;
       font-size: 16px;
+      box-sizing: border-box;
     }
+
     button {
       background-color: #00e676;
       color: black;
@@ -201,9 +193,11 @@
       cursor: pointer;
       margin-top: 15px;
     }
+
     button:hover {
       background-color: #00c853;
     }
+
     .car-section {
       max-width: 1100px;
       margin: 40px auto 0;
@@ -211,30 +205,35 @@
       padding: 20px;
       border-radius: 15px;
     }
+
     .car-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
       margin-top: 20px;
     }
+
     .car-card {
       background-color: #1b1b1b;
       padding: 15px;
       border-radius: 10px;
       text-align: center;
     }
+
     .car-card img {
       max-width: 100%;
       height: 160px;
       object-fit: cover;
       border-radius: 8px;
     }
+
     .car-name {
       margin-top: 10px;
       font-size: 18px;
       font-weight: bold;
       color: #00e676;
     }
+
     .action-buttons {
       margin-top: 10px;
       display: flex;
@@ -242,978 +241,949 @@
       gap: 10px;
       flex-wrap: wrap;
     }
+
     .action-buttons a button {
       padding: 8px 12px;
       font-size: 15px;
       border-radius: 6px;
       border: none;
       cursor: pointer;
+      width: auto;
     }
+
     .call-btn {
       background-color: #00e676;
       color: black;
     }
+
     .whatsapp-btn {
       background-color: #25D366;
       color: white;
     }
+
     @media (max-width: 600px) {
       .car-card img {
         height: 140px;
       }
     }
+
     /* ===== About Section CSS ===== */
-html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; }
 
-.about-section {
-  max-width: 900px;
-  margin: 60px auto;
-  background-color: rgba(0, 0, 0, 0.85);
-  padding: 30px;
-  border-radius: 15px;
-  color: white;
-  line-height: 1.6;
-}
-
-.about-section h2 {
-  text-align: center;
-  color: #00e676;
-  font-size: 28px;
-  margin-bottom: 25px;
-}
-
-.about-section h3 {
-  color: #00e676;
-  margin-top: 30px;
-  font-size: 22px;
-  border-bottom: 2px solid #00e676;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.about-category {
-  margin-top: 20px;
-}
-
-.about-category h4 {
-  color: #00e676;
-  margin-bottom: 8px;
-}
-
-.about-category ul {
-  list-style: none;
-  padding-left: 15px;
-}
-
-.about-category ul li::before {
-  content: "✔ ";
-  color: #00e676;
-}
-
-.about-category p {
-  color: #f2f2f2;
-  margin-top: 5px;
-}
-/* ===== Trip Selector ===== */
-.trip-selector{
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:10px;
-margin:25px 0;
-}
-
-.trip-option{
-display:flex;
-align-items:center;
-gap:8px;
-font-size:18px;
-font-weight:bold;
-color:white;
-white-space:nowrap;
-margin:0;
-padding:0;
-line-height:1;
-}
-
-.trip-option {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
-}
-.trip-option input[type="radio"]{
-width:22px;
-height:22px;
-accent-color:#00e676;
-margin:0;
-vertical-align:middle;
-}
-.airport-title{
-  background:#00e676;
-  color:#000;
-  font-weight:bold;
-  text-align:center;
-  padding:10px;
-  border-radius:8px;
-  margin-bottom:15px;
-}
-.airport-radio{
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-  margin-bottom:15px;
-}
-
-.airport-option{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  margin:0;
-  padding:0;
-}
-
-.airport-option input[type="radio"]{
-  width:22px;
-  height:22px;
-  margin:0;
-  accent-color:#00e676;
-}
-
-.airport-option span{
-  font-size:18px;
-  color:white;
-}
-  </style>
-</head>
-<body>
-  <!-- ==== MENU BAR ==== -->
-<div class="menu-container">
-  <div class="menu-icon" onclick="toggleMenu()">☰</div>
-  <ul class="nav-menu" id="navMenu">
-  <li><a href="#bookingForm">Home</a></li>
-  <li><a href="#about">About Us</a></li>
-</ul>
-</div>
-<!-- Top Header Section -->
-<div class="top-header">
-<nav 
-</nav>
-  <div class="left">
-    <img src="image-5.png" alt="NirmalCab Logo" class="logo" />
-    <div class="text">
-      <h2>NirmalCab</h2>
-      <p>Best Cab for All Destination</p>
-    </div>
-  </div>
-  <div class="right">
-    <div class="phone">
-      <span class="phone-icon">📞</span>
-       <div class="phone-bg">
-      <a href="tel:9726662197">+91 9726662197</a>
-    </div>
-    <button class="call-back-btn" onclick="openForm()">Request Call Back</button>
-<h3 style="text-align:center; color:#00e676; font-weight:bold; margin-top:20px;">
-</h3>
-  </div>
-</div>
-  <!-- Popup Form -->
-<div id="popupForm" style="display:none; position:fixed; top:20%; left:50%; transform:translate(-50%, 0); background:#fff; padding:20px; border:2px solid #333; border-radius:10px; z-index:1000;">
-  <h3>Request a Call Back</h3>
-  <label>Name:</label>
-  <input type="text" id="popupName" placeholder="Enter your name" style="display:block; margin-bottom:10px; width:100%;" />
-  <label>Phone Number:</label>
-  <input type="text" id="popupPhone" placeholder="Enter your phone number" style="display:block; margin-bottom:10px; width:100%;" />
-  <button onclick="sendWhatsAppMessage()">Send via WhatsApp</button>
-  <button onclick="closeForm()" style="margin-left:10px;">Cancel</button>
-</div>
-
-<script>
-
-  function openForm() {
-    document.getElementById('popupForm').style.display = 'block';
-  }
-
-  function closeForm() {
-    document.getElementById('popupForm').style.display = 'none';
-  }
-
-  function sendWhatsAppMessage() {
-    const name = document.getElementById('popupName').value.trim();
-const phone = document.getElementById('popupPhone').value.trim();
-    const yourNumber = "919726662197"; // Your WhatsApp number with country code
-
-    if (name === "" || phone === "") {
-      alert("Please fill in both fields.");
-      return;
-    }
-
-    const message = `Hello, I am ${name}. Please call me back on ${phone}.`;
-    const whatsappUrl = `https://wa.me/${yourNumber}?text=${encodeURIComponent(message)}`;
-
-    window.open(whatsappUrl, "_blank");
-    closeForm();
-  }
-</script>
-<!-- Page anchors for top navigation -->
-<div id="home"></div> 
-<!-- Trip Type Selector -->
-<div class="trip-selector">
-
-  <label class="trip-option">
-<input type="radio" name="tripType" checked onclick="showForm('oneway')">
-    <span>One Way</span>
-  </label>
-
-  <label class="trip-option">
-    <input type="radio" name="tripType" onclick="showForm('round')">
-    <span>Round Trip</span>
-  </label>
-
-  <label class="trip-option">
-    <input type="radio" name="tripType" onclick="showForm('airport')">
-    <span>Airport</span>
-  </label>
-
-</div>
-<div id="bookingForm"></div>
-<div id="oneWayForm">
-<label for="name">Your Name:</label>
-<input type="text" id="custName" placeholder="Enter your name" required style="margin-bottom: 10px; width: 100%;" />
-
-<label for="phone">Your Phone Number:</label>
-<input type="tel" id="custPhone" placeholder="Enter your phone number" pattern="[0-9]{10}" maxlength="10" required style="margin-bottom: 20px; width: 100%;" />
-
-  <label for="pickup">Pickup City:</label>
-  <input list="cities" id="pickup" required>
-
-  <label for="drop">Drop City:</label>
-  <input list="cities" id="drop" required>
-
-  <label for="travelDate">Travel Date:</label>
-  <input type="date" id="travelDate" required>
-<label for="travelTime">Travel Time:</label>
-<input type="time" id="travelTime" required>
-  <datalist id="cities">
-<option value="Ahmedabad">
-<option value="Agra">
-<option value="Amritsar">
-<option value="Asansol">
-<option value="Aurangabad">
-<option value="Bangalore">
-<option value="Bhopal">
-<option value="Bhubaneswar">
-<option value="Chandigarh">
-<option value="Chennai">
-<option value="Coimbatore">
-<option value="Delhi">
-<option value="Dehradun">
-<option value="Durgapur">
-<option value="Faridabad">
-<option value="Ghaziabad">
-<option value="Guwahati">
-<option value="Gwalior">
-<option value="Hyderabad">
-<option value="Indore">
-<option value="Jaipur">
-<option value="Jalandhar">
-<option value="Jammu">
-<option value="Jamshedpur">
-<option value="Jodhpur">
-<option value="Kanpur">
-<option value="Kochi">
-<option value="Kolkata">
-<option value="Lucknow">
-<option value="Ludhiana">
-<option value="Madurai">
-<option value="Meerut">
-<option value="Mumbai">
-<option value="Nagpur">
-<option value="Nashik">
-<option value="Noida">
-<option value="Patna">
-<option value="Pune">
-<option value="Raipur">
-<option value="Rajkot">
-<option value="Ranchi">
-<option value="Shimla">
-<option value="Siliguri">
-<option value="Srinagar">
-<option value="Surat">
-<option value="Thane">
-<option value="Thiruvananthapuram">
-<option value="Udaipur">
-<option value="Vadodara">
-<option value="Varanasi">
-<option value="Vijayawada">
-<option value="Visakhapatnam">
-<option value="Warangal">
-  </datalist>
-
-  <button type="button" onclick="sendWhatsApp()">Book on WhatsApp</button>
-</form>
-
-<a href="tel:9726662197">
-  <button>📞 Call Now</button>
-</a>
-</div>
-<div id="roundTripForm" style="display:none;">
-
-<label>Your Name:</label>
-<input type="text" id="rtName">
-
-<label>Your Phone Number:</label>
-<input type="tel" id="rtPhone">
-
-<label>Pickup City:</label>
-<input list="cities" id="rtPickup">
-
-<label>Drop City:</label>
-<input list="cities" id="rtDrop">
-
-<button type="button" onclick="addStop()">➕ Add Stop</button>
-
-<div id="stopContainer"></div>
-
-<label>Pickup Date:</label>
-<input type="date" id="rtPickupDate">
-
-<label>Pickup Time:</label>
-<input type="time" id="rtPickupTime">
-
-<label>Drop Date:</label>
-<input type="date" id="rtDropDate">
-
-<label>Drop Time:</label>
-<input type="time" id="rtDropTime">
-
-<button type="button" onclick="sendRoundTripWhatsApp()">
-Book Round Trip
-</button>
-
-<a href="tel:9726662197">
-<button type="button">📞 Call Now</button>
-</a>
-
-</div>
-<div id="airportForm" style="display:none;">
-
-<div class="airport-title">
-  TRIP TYPE
-</div>
-<div class="airport-radio">
-
-<label class="airport-option">
-<input type="radio"
-name="airportTrip"
-checked
-onclick="changeAirportType('to')">
-
-<span>Cab To Airport</span>
-</label>
-
-<label class="airport-option">
-<input type="radio"
-name="airportTrip"
-onclick="changeAirportType('from')">
-
-<span>Cab From Airport</span>
-</label>
-
-</div>
-
-<label id="airportLabel1">From City:</label>
-<input list="cities" id="airportFrom">
-
-<label id="airportLabel2">Airport:</label>
-<input type="text" id="airportTo"
-placeholder="Airport Name">
-
-<label>Pickup Date:</label>
-<input type="date" id="airportDate">
-
-<label>Pickup Time:</label>
-<input type="time" id="airportTime">
-
-<button type="button"
-onclick="sendAirportWhatsApp()">
-Book Airport Cab
-</button>
-
-<a href="tel:9726662197">
-<button type="button">
-📞 Call Now
-</button>
-</a>
-
-</div>
-
-  </div>  <div class="car-section">
-    <h2>POPULAR TAXI</h2>
-    <div class="car-grid">
-      <div class="car-card">
-        <img src="dzire.jpg"> 
-        <div class="car-name">Swift Dzire</div>
-        <div class="action-buttons">
-          <a href="tel:9726662197"><button class="call-btn">Call</button></a>
-          <a href="javascript:void(0);" onclick="sendCarBooking('Swift Dzire')"><button class="whatsapp-btn">WhatsApp</button></a>
-        </div>
-      </div>
-      <div class="car-card">
-        <img src="etios.jpg">
-        <div class="car-name">Toyota Etios</div>
-        <div class="action-buttons">
-          <a href="tel:9726662197"><button class="call-btn">Call</button></a>
-          <a href="javascript:void(0);" onclick="sendCarBooking('Toyota Etios')"><button class="whatsapp-btn">WhatsApp</button></a>
-        </div>
-      </div>
-      <div class="car-card">
-        <img src="ciaz.jpg">
-        <div class="car-name">Maruti Ciaz</div>
-        <div class="action-buttons">
-          <a href="tel:9726662197"><button class="call-btn">Call</button></a>
-          <a href="javascript:void(0);" onclick="sendCarBooking('Maruti Ciaz')"><button class="whatsapp-btn">WhatsApp</button></a>
-        </div>
-      </div>
-      <div class="car-card">
-        <img src="amaze.jpg">
-        <div class="car-name">Honda Amaze</div>
-        <div class="action-buttons">
-          <a href="tel:9726662197"><button class="call-btn">Call</button></a>
-          <a href="javascript:void(0);" onclick="sendCarBooking('Honda Amaze')"><button class="whatsapp-btn">WhatsApp</button></a>
-        </div>
-      </div>
-      <div class="car-card">
-        <img src="innova.jpg">
-        <div class="car-name">Toyota Innova</div>
-        <div class="action-buttons">
-          <a href="tel:9726662197"><button class="call-btn">Call</button></a>
-          <a href="javascript:void(0);" onclick="sendCarBooking('Toyota Innova')"><button class="whatsapp-btn">WhatsApp</button></a>
-        </div>
-      </div>
-      <div class="car-card">
-        <img src="ertiga.jpg">
-        <div class="car-name">Maruti Suzuki Ertiga</div>
-        <div class="action-buttons">
-          <a href="tel:9726662197"><button class="call-btn">Call</button></a>
-          <a href="javascript:void(0);" onclick="sendCarBooking('Maruti Suzuki Ertiga')"><button class="whatsapp-btn">WhatsApp</button></a>
-        </div>
-      </div>
-      <div class="car-card">
-        <img src="crysta.jpg">
-        <div class="car-name">Innova Crysta</div>
-        <div class="action-buttons">
-          <a href="tel:9726662197"><button class="call-btn">Call</button></a>
-          <a href="javascript:void(0);" onclick="sendCarBooking('Innova Crysta')"><button class="whatsapp-btn">WhatsApp</button></a>
-        </div>
-      </div>
-    </div>
-  </div> <script>
-  function sendWhatsApp() {
-    const name = document.getElementById('custName').value.trim();
-    const phone = document.getElementById('custPhone').value.trim();
-    const pickup = document.getElementById('pickup').value.trim();
-    const drop = document.getElementById('drop').value.trim();
-    const travelDate = document.getElementById('travelDate').value.trim();
-    const travelTime = document.getElementById('travelTime').value.trim();
-
-    const message =
-        `*🚖 Nirmal Cab Booking Request 🚖*\n` +
-        `------------------------------\n` +
-        `*Name:* ${name}\n` +
-        `*Phone:* ${phone}\n` +
-        `*Pickup City:* ${pickup}\n` +
-        `*Drop City:* ${drop}\n` +
-        `*Travel Date:* ${travelDate}\n` +
-        `*Travel Time:* ${travelTime}\n` +
-        `------------------------------`;
-
-    const whatsappURL = "https://wa.me/919726662197?text=" + encodeURIComponent(message);
-    window.open(whatsappURL, "_blank");
-}
-</script>
-<script>
-function toggleMenu() {
-  const navMenu = document.getElementById("navMenu");
-  navMenu.classList.toggle("active");
-}
-
-// Menu link pe click karne ke baad close karne ke liye
-document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll(".nav-menu a");
-  const navMenu = document.getElementById("navMenu");
-
-  links.forEach(link => {
-    link.addEventListener("click", () => {
-      navMenu.classList.remove("active"); // menu close hoga
-    });
-  });
-});
-</script>
-</script>
-  </body>
-  <!-- About Us Section -->
-<!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nirmal Cab - Booking</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-      padding: 20px;
-    }
-    .form-container {
-      max-width: 450px;
-      margin: auto;
-      background: rgba(0, 0, 0, 0.75);
-      padding: 25px;
-      border-radius: 12px;
-    }
-    h2 {
-      text-align: center;
-      color: #00e676;
-    }
-    label {
-      display: block;
-      margin-top: 12px;
-    }
-    input, button, select, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 6px;
-      border: none;
-      font-size: 16px;
-    }
-    button {
-      background-color: #00e676;
-      color: black;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 15px;
-    }
-    button:hover {
-      background-color: #00c853;
-    }
-    .car-section {
-      max-width: 1100px;
-      margin: 40px auto 0;
-      background-color: rgba(0, 0, 0, 0.75);
-      padding: 20px;
-      border-radius: 15px;
-    }
-    .car-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-    .car-card {
-      background-color: #1b1b1b;
-      padding: 15px;
-      border-radius: 10px;
-      text-align: center;
-    }
-    .car-card img {
-      max-width: 100%;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-    .car-name {
-      margin-top: 10px;
-      font-size: 18px;
-      font-weight: bold;
-      color: #00e676;
-    }
-    .action-buttons {
-      margin-top: 10px;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .action-buttons a button {
-      padding: 8px 12px;
-      font-size: 15px;
-      border-radius: 6px;
-      border: none;
-      cursor: pointer;
-    }
-    .call-btn {
-      background-color: #00e676;
-      color: black;
-    }
-    .whatsapp-btn {
-      background-color: #25D366;
-      color: white;
-    }
-    @media (max-width: 600px) {
-      .car-card img {
-        height: 140px;
-      }
-    }
     .about-section {
       max-width: 900px;
-      margin: 40px auto;
-      background-color: rgba(0, 0, 0, 0.8);
+      margin: 60px auto;
+      background-color: rgba(0, 0, 0, 0.85);
       padding: 30px;
       border-radius: 15px;
-      text-align: left;
+      color: white;
+      line-height: 1.6;
     }
+
     .about-section h2 {
       text-align: center;
       color: #00e676;
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+
+    .about-section h3 {
+      color: #00e676;
+      margin-top: 30px;
+      font-size: 22px;
+      border-bottom: 2px solid #00e676;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .about-category {
+      margin-top: 20px;
+    }
+    .about-category h4 {
+      color: #00e676;
+      margin-bottom: 8px;
+    }
+
+    .about-category ul {
+      list-style: none;
+      padding-left: 15px;
+    }
+
+    .about-category ul li::before {
+      content: "✔ ";
+      color: #00e676;
+    }
+
+    .about-category p {
+      color: #f2f2f2;
+      margin-top: 5px;
+    }
+
+    /* ===== Trip Selector ===== */
+    .trip-selector {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .trip-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      white-space: nowrap;
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+    }
+
+    .trip-option input[type="radio"] {
+      width: 22px;
+      height: 22px;
+      accent-color: #00e676;
+      margin: 0;
+      vertical-align: middle;
+    }
+
+    .airport-title {
+      background: #00e676;
+      color: #000;
+      font-weight: bold;
+      text-align: center;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .airport-radio {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+
+    .airport-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .airport-option input[type="radio"] {
+      width: 22px;
+      height: 22px;
+      margin: 0;
+      accent-color: #00e676;
+    }
+
+    .airport-option span {
+      font-size: 18px;
+      color: white;
+    }
+
+    /* ===== PAYALCAB EXACT THEME ROUTES STYLES ===== */
+    .payal-banner-box {
+      background: #ffffff;
+      color: #222;
+      border-radius: 12px;
+      padding: 25px 20px 15px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .payal-banner-box h1 {
+      color: #f97316;
+      font-size: 26px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    .payal-banner-box p {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.5;
+      max-width: 700px;
+      margin: 0 auto 15px;
+    }
+    .payal-banner-box img {
+      width: 100%;
+      max-width: 480px;
+      border-radius: 8px;
+      margin: 0 auto;
+      display: block;
+    }
+    .payal-hub-title {
+      color: #f97316;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 25px 0 12px;
+      border-bottom: 2px solid #f97316;
+      padding-bottom: 5px;
+      display: inline-block;
+    }
+    .payal-routes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 10px;
       margin-bottom: 20px;
     }
-    .about-point {
-      margin: 15px 0;
+    .payal-route-link {
+      background: #1e293b;
+      color: #ef4444;
+      padding: 12px 14px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      border: 1px solid #334155;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: left;
+      display: block;
     }
-    .about-point strong {
+    .payal-route-link:hover {
+      background: #334155;
       color: #00e676;
-      font-size: 18px;
-    }
-    .about-section h3 {
-      text-align: center;
-      margin-top: 40px;
-      color: #ffffff;
+      border-color: #00e676;
+      transform: translateX(4px);
     }
   </style>
 </head>
 <body>
 
+  <!-- Top Header Section (Transparent & Aligned) -->
+  <div class="top-header">
+    <div class="left">
+      <img src="image-5.png" alt="NirmalCab Logo" class="logo" />
+      <div class="text">
+        <h2>NirmalCab</h2>
+        <p>Best Cab for All Destination</p>
+      </div>
+    </div>
+    
+    <div class="right">
+      <div class="right-top-row">
+        <div class="phone-bg">
+          <a href="tel:9726662197">+91 9726662197</a>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+      </div>
+    </div>
 
-<!-- ABOUT US SECTION -->
-<div class="about-section" id="about">
-  <h2>About Us</h2>
-  
-  <h3>Our Cab Rental Services</h3>
-
-  <div class="about-category">
-    <h4>Airport Transfers</h4>
-    <ul>
-      <li>Reliable pick-up and drop services for all Mumbai airports with flight tracking</li>
-      <li>Meet &amp; greet service available</li>
-      <li>Waiting time included</li>
-      <li>24/7 availability</li>
+    <!-- Navigation Menu Dropdown -->
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="javascript:void(0);" onclick="showHomePageView()">Home</a></li>
+      <li><a href="javascript:void(0);" onclick="showRoutesPageView()">Routes</a></li>
+      <li><a href="#about" onclick="showHomePageView()">About Us</a></li>
     </ul>
   </div>
 
-  <div class="about-category">
-    <h4>Corporate Travel</h4>
-    <ul>
-      <li>Professional chauffeur services for business travelers</li>
-      <li>Monthly contracts available</li>
-      <li>Executive car fleet</li>
-      <li>WiFi equipped vehicles</li>
-    </ul>
+<!-- Request Call Back Full Width Button Under Header -->
+  <button class="call-back-btn" onclick="openForm()">Request Call Back</button>
+
+  <!-- Popup Form -->
+  <div id="popupForm" style="display:none; position:fixed; top:20%; left:50%; transform:translate(-50%, 0); background:#fff; color:#000; padding:20px; border:2px solid #333; border-radius:10px; z-index:10001; max-width:90%; width:320px;">
+    <h3 style="color:#000;">Request a Call Back</h3>
+    <label style="color:#333;">Name:</label>
+    <input type="text" id="popupName" placeholder="Enter your name" style="display:block; margin-bottom:10px; width:100%; border:1px solid #ccc;" />
+    <label style="color:#333;">Phone Number:</label>
+    <input type="text" id="popupPhone" placeholder="Enter your phone number" style="display:block; margin-bottom:10px; width:100%; border:1px solid #ccc;" />
+    <button onclick="sendWhatsAppMessage()">Send via WhatsApp</button>
+    <button onclick="closeForm()" style="margin-top:8px; background:#888; color:#fff;">Cancel</button>
+  </div>
+  <!-- ===== MAIN HOME PAGE CONTAINER ===== -->
+  <div id="homeMainView">
+
+    <div id="home"></div> 
+
+    <!-- Trip Type Selector -->
+    <div class="trip-selector">
+      <label class="trip-option">
+        <input type="radio" name="tripType" checked onclick="showForm('oneway')">
+        <span>One Way</span>
+      </label>
+      <label class="trip-option">
+        <input type="radio" name="tripType" onclick="showForm('round')">
+        <span>Round Trip</span>
+      </label>
+      <label class="trip-option">
+        <input type="radio" name="tripType" onclick="showForm('airport')">
+        <span>Airport</span>
+      </label>
+    </div>
+
+    <div id="bookingForm"></div>
+
+    <!-- ONE WAY FORM -->
+    <div id="oneWayForm">
+      <label for="custName">Your Name:</label>
+      <input type="text" id="custName" placeholder="Enter your name" required style="margin-bottom: 10px; width: 100%;" />
+
+      <label for="custPhone">Your Phone Number:</label>
+      <input type="tel" id="custPhone" placeholder="Enter your phone number" pattern="[0-9]{10}" maxlength="10" required style="margin-bottom: 20px; width: 100%;" />
+
+      <label for="pickup">Pickup City:</label>
+      <input list="cities" id="pickup" required>
+
+      <label for="drop">Drop City:</label>
+      <input list="cities" id="drop" required>
+
+      <label for="travelDate">Travel Date:</label>
+      <input type="date" id="travelDate" required>
+
+      <label for="travelTime">Travel Time:</label>
+      <input type="time" id="travelTime" required>
+
+      <datalist id="cities">
+        <option value="Ahmedabad"><option value="Agra"><option value="Amritsar"><option value="Asansol"><option value="Aurangabad">
+        <option value="Bangalore"><option value="Bhopal"><option value="Bhubaneswar"><option value="Chandigarh"><option value="Chennai">
+        <option value="Coimbatore"><option value="Delhi"><option value="Dehradun"><option value="Durgapur"><option value="Faridabad">
+        <option value="Ghaziabad"><option value="Guwahati"><option value="Gwalior"><option value="Hyderabad"><option value="Indore">
+        <option value="Jaipur"><option value="Jalandhar"><option value="Jammu"><option value="Jamshedpur"><option value="Jodhpur">
+        <option value="Kanpur"><option value="Kochi"><option value="Kolkata"><option value="Lucknow"><option value="Ludhiana">
+        <option value="Madurai"><option value="Meerut"><option value="Mumbai"><option value="Nagpur"><option value="Nashik">
+        <option value="Noida"><option value="Patna"><option value="Pune"><option value="Raipur"><option value="Rajkot">
+        <option value="Ranchi"><option value="Shimla"><option value="Siliguri"><option value="Srinagar"><option value="Surat">
+        <option value="Thane"><option value="Thiruvananthapuram"><option value="Udaipur"><option value="Vadodara"><option value="Varanasi">
+        <option value="Vijayawada"><option value="Visakhapatnam"><option value="Warangal">
+      </datalist>
+
+      <button type="button" onclick="sendWhatsApp()">Book on WhatsApp</button>
+      <a href="tel:9726662197"><button type="button">📞 Call Now</button></a>
+    </div>
+
+    <!-- ROUND TRIP FORM -->
+    <div id="roundTripForm" style="display:none;">
+      <label>Your Name:</label>
+      <input type="text" id="rtName">
+
+      <label>Your Phone Number:</label>
+      <input type="tel" id="rtPhone">
+
+      <label>Pickup City:</label>
+      <input list="cities" id="rtPickup">
+
+      <label>Drop City:</label>
+      <input list="cities" id="rtDrop">
+
+      <button type="button" onclick="addStop()">➕ Add Stop</button>
+      <div id="stopContainer"></div>
+
+      <label>Pickup Date:</label>
+      <input type="date" id="rtPickupDate">
+
+      <label>Pickup Time:</label>
+      <input type="time" id="rtPickupTime">
+
+      <label>Drop Date:</label>
+      <input type="date" id="rtDropDate">
+
+      <label>Drop Time:</label>
+      <input type="time" id="rtDropTime">
+
+      <button type="button" onclick="sendRoundTripWhatsApp()">Book Round Trip</button>
+      <a href="tel:9726662197"><button type="button">📞 Call Now</button></a>
+    </div>
+
+    <!-- AIRPORT FORM -->
+    <div id="airportForm" style="display:none;">
+      <div class="airport-title">TRIP TYPE</div>
+      <div class="airport-radio">
+        <label class="airport-option">
+          <input type="radio" name="airportTrip" checked onclick="changeAirportType('to')">
+          <span>Cab To Airport</span>
+        </label>
+        <label class="airport-option">
+          <input type="radio" name="airportTrip" onclick="changeAirportType('from')">
+          <span>Cab From Airport</span>
+        </label>
+      </div>
+      <label id="airportLabel1">From City:</label>
+      <input list="cities" id="airportFrom">
+
+      <label id="airportLabel2">Airport:</label>
+      <input type="text" id="airportTo" placeholder="Airport Name">
+
+      <label>Pickup Date:</label>
+      <input type="date" id="airportDate">
+
+      <label>Pickup Time:</label>
+      <input type="time" id="airportTime">
+
+      <button type="button" onclick="sendAirportWhatsApp()">Book Airport Cab</button>
+      <a href="tel:9726662197"><button type="button">📞 Call Now</button></a>
+    </div>
+
+    <!-- POPULAR TAXI GRID -->
+    <div class="car-section">
+      <h2>POPULAR TAXI</h2>
+      <div class="car-grid">
+        <div class="car-card">
+          <img src="dzire.jpg" alt="Swift Dzire"> 
+          <div class="car-name">Swift Dzire</div>
+          <div class="action-buttons">
+            <a href="tel:9726662197"><button class="call-btn">Call</button></a>
+            <a href="javascript:void(0);" onclick="sendCarBooking('Swift Dzire')"><button class="whatsapp-btn">WhatsApp</button></a>
+          </div>
+        </div>
+        <div class="car-card">
+          <img src="etios.jpg" alt="Toyota Etios">
+          <div class="car-name">Toyota Etios</div>
+          <div class="action-buttons">
+            <a href="tel:9726662197"><button class="call-btn">Call</button></a>
+            <a href="javascript:void(0);" onclick="sendCarBooking('Toyota Etios')"><button class="whatsapp-btn">WhatsApp</button></a>
+          </div>
+        </div>
+        <div class="car-card">
+          <img src="ciaz.jpg" alt="Maruti Ciaz">
+          <div class="car-name">Maruti Ciaz</div>
+          <div class="action-buttons">
+            <a href="tel:9726662197"><button class="call-btn">Call</button></a>
+            <a href="javascript:void(0);" onclick="sendCarBooking('Maruti Ciaz')"><button class="whatsapp-btn">WhatsApp</button></a>
+          </div>
+        </div>
+        <div class="car-card">
+          <img src="amaze.jpg" alt="Honda Amaze">
+          <div class="car-name">Honda Amaze</div>
+          <div class="action-buttons">
+            <a href="tel:9726662197"><button class="call-btn">Call</button></a>
+            <a href="javascript:void(0);" onclick="sendCarBooking('Honda Amaze')"><button class="whatsapp-btn">WhatsApp</button></a>
+          </div>
+        </div>
+        <div class="car-card">
+          <img src="innova.jpg" alt="Toyota Innova">
+          <div class="car-name">Toyota Innova</div>
+          <div class="action-buttons">
+            <a href="tel:9726662197"><button class="call-btn">Call</button></a>
+            <a href="javascript:void(0);" onclick="sendCarBooking('Toyota Innova')"><button class="whatsapp-btn">WhatsApp</button></a>
+          </div>
+        </div>
+        <div class="car-card">
+          <img src="ertiga.jpg" alt="Maruti Suzuki Ertiga">
+          <div class="car-name">Maruti Suzuki Ertiga</div>
+          <div class="action-buttons">
+            <a href="tel:9726662197"><button class="call-btn">Call</button></a>
+            <a href="javascript:void(0);" onclick="sendCarBooking('Maruti Suzuki Ertiga')"><button class="whatsapp-btn">WhatsApp</button></a>
+          </div>
+        </div>
+        <div class="car-card">
+          <img src="crysta.jpg" alt="Innova Crysta">
+          <div class="car-name">Innova Crysta</div>
+          <div class="action-buttons">
+            <a href="tel:9726662197"><button class="call-btn">Call</button></a>
+            <a href="javascript:void(0);" onclick="sendCarBooking('Innova Crysta')"><button class="whatsapp-btn">WhatsApp</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT US SECTION -->
+    <div class="about-section" id="about">
+      <h2>About Us</h2>
+      <h3>Our Cab Rental Services</h3>
+
+      <div class="about-category">
+        <h4>Airport Transfers</h4>
+        <ul>
+          <li>Reliable pick-up and drop services for all Mumbai airports with flight tracking</li>
+          <li>Meet &amp; greet service available</li>
+          <li>Waiting time included</li>
+          <li>24/7 availability</li>
+        </ul>
+      </div>
+
+      <div class="about-category">
+        <h4>Corporate Travel</h4>
+        <ul>
+          <li>Professional chauffeur services for business travelers</li>
+          <li>Monthly contracts available</li>
+          <li>Executive car fleet</li>
+          <li>WiFi equipped vehicles</li>
+        </ul>
+      </div>
+
+      <div class="about-category">
+        <h4>Special Occasions</h4>
+        <ul>
+          <li>Luxury transportation for weddings and events</li>
+          <li>Decorated vehicles</li>
+          <li>Bridal packages</li>
+          <li>Multiple vehicle coordination</li>
+        </ul>
+      </div>
+
+      <div class="about-category">
+        <h4>City Tours</h4>
+        <ul>
+          <li>Explore Mumbai with our knowledgeable drivers</li>
+          <li>Half-day and full-day packages</li>
+          <li>Multi-lingual drivers</li>
+          <li>Customizable itineraries</li>
+        </ul>
+      </div>
+
+      <h3>Why Choose Us?</h3>
+      <div class="about-category">
+        <h4>No Hidden Costs</h4>
+        <p>All-inclusive pricing with no surprise charges. We provide detailed quotes upfront with breakdown of all costs including tolls, parking and waiting time.</p>
+      </div>
+      <div class="about-category">
+        <h4>Experienced Team</h4>
+        <p>Our drivers average 8+ years of driving experience with extensive local knowledge and defensive driving certifications.</p>
+      </div>
+      <div class="about-category">
+        <h4>Customized Services</h4>
+        <p>From child seats to special accessibility needs, we tailor every aspect of your ride. Our concierge team coordinates special requests.</p>
+      </div>
+      <div class="about-category">
+        <h4>Punctuality</h4>
+        <p>98% on-time performance with real-time tracking and proactive communication if any delays occur due to unforeseen circumstances.</p>
+      </div>
+      <div class="about-category">
+        <h4>Well-Maintained Fleet</h4>
+        <p>All vehicles undergo 150-point inspections weekly. We maintain a diverse fleet from economy sedans to luxury SUVs, all less than 3 years old.</p>
+      </div>
+
+      <h3>Our Commitment</h3>
+      <p>We are committed to providing safe, comfortable, and enjoyable travel experiences at pocket-friendly rates. All our services adhere to industry standards and are supervised by our tourism experts to ensure your complete satisfaction.</p>
+    </div>
+
+    <!-- CONTACT US SECTION -->
+    <section id="contact" style="text-align:center; padding:30px; background-color:#000; color:white;">
+      <h2 style="margin-bottom:15px;">Contact Us</h2>
+      <div style="margin-top:15px;">
+        <a href="tel:+919726662197" target="_blank" style="margin:10px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" width="35" height="35" alt="Call" style="filter: invert(81%) sepia(38%) saturate(707%) hue-rotate(74deg) brightness(95%) contrast(92%);">
+        </a>
+        <a href="https://wa.me/919726662197" target="_blank" style="margin:10px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="40" height="40" alt="WhatsApp">
+        </a>
+        <a href="https://www.facebook.com/share/1BrqXkb1ZU/" target="_blank" style="margin:10px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" width="40" height="40" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/nirmalcab.in?igsh=cW9kbm1tNWRpNDJs" target="_blank" style="margin:10px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="40" height="40" alt="Instagram">
+        </a>
+      </div>
+    </section>
+
+  </div> <!-- End of homeMainView -->
+  <!-- ===== PAYALCAB EXACT ROUTES PAGE VIEW ===== -->
+  <div id="routesPageView" style="display:none; max-width:1100px; margin:20px auto; padding:10px;">
+    
+    <div style="margin-bottom:15px; text-align:right;">
+      <button onclick="showHomePageView()" style="width:auto; padding:8px 18px; background:#00e676; color:#000; font-weight:bold; border-radius:6px; cursor:pointer;">← Back to Home</button>
+    </div>
+
+    <!-- PayalCab Style Top Banner -->
+    <div class="payal-banner-box">
+      <h1>Routes | Nirmal Cab</h1>
+      <p>Nirmal Cab provides one side taxi from one city to another. We provide Instant Confirmation on below mentioned routes. Why pay for return fare if you are traveling one side only?</p>
+      <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=600&q=80" alt="Taxi Routes Banner">
+    </div>
+
+    <!-- Category: From Ahmedabad -->
+    <div class="payal-hub-title">One Way Taxi From Ahmedabad (Gujarat)</div>
+    <div class="payal-routes-grid">
+      <div class="payal-route-link" onclick="openExactRoute('Ahmedabad to Jodhpur', 460, 4999, 5699, 7999)">Ahmedabad to Jodhpur Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Ahmedabad to Ankleshwar', 190, 2499, 2899, 4199)">Ahmedabad to Ankleshwar Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Ahmedabad to Bharuch', 190, 2499, 2899, 4199)">Ahmedabad to Bharuch Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Ahmedabad to Dhrangadhra', 125, 1899, 2299, 3299)">Ahmedabad to Dhrangadhra Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Ahmedabad to Dahej', 240, 2999, 3499, 4899)">Ahmedabad to Dahej Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Ahmedabad to Dhari', 270, 3299, 3799, 5299)">Ahmedabad to Dhari Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Ahmedabad to Gandhidham', 290, 3499, 3999, 5599)">Ahmedabad to Gandhidham Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Ahmedabad to Himmatnagar', 80, 1499, 1799, 2699)">Ahmedabad to Himmatnagar Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Ahmedabad to Jamnagar', 300, 3499, 3999, 5699)">Ahmedabad to Jamnagar Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Ahmedabad to Bikaner', 690, 7999, 8999, 12999)">Ahmedabad to Bikaner Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Ahmedabad to Surat', 260, 2699, 3199, 4599)">Ahmedabad to Surat Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Ahmedabad to Mumbai', 530, 5699, 6499, 8999)">Ahmedabad to Mumbai Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Ahmedabad to Vadodara', 110, 1699, 1999, 2899)">Ahmedabad to Vadodara Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Ahmedabad to Rajkot', 215, 2499, 2899, 4199)">Ahmedabad to Rajkot Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Ahmedabad to Bhavnagar', 170, 2299, 2699, 3799)">Ahmedabad to Bhavnagar Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Ahmedabad to Bhuj', 340, 3999, 4599, 6499)">Ahmedabad to Bhuj Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Ahmedabad to Udaipur', 260, 3199, 3699, 5299)">Ahmedabad to Udaipur Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Ahmedabad to Mount Abu', 225, 2999, 3499, 4999)">Ahmedabad to Mount Abu Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Ahmedabad to Somnath', 400, 4699, 5299, 7499)">Ahmedabad to Somnath Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Ahmedabad to Dwarka', 440, 4999, 5699, 7999)">Ahmedabad to Dwarka Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Ahmedabad to Ambaji', 180, 2399, 2799, 3999)">Ahmedabad to Ambaji Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Ahmedabad to Shirdi', 570, 6299, 7199, 9999)">Ahmedabad to Shirdi Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Ahmedabad to Pune', 660, 7299, 8199, 11499)">Ahmedabad to Pune Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Ahmedabad to Indore', 390, 4699, 5399, 7499)">Ahmedabad to Indore Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Ahmedabad to Jaipur', 660, 7499, 8499, 11999)">Ahmedabad to Jaipur Cab</div>
+    </div>
+
+    <!-- Category: From Surat -->
+    <div class="payal-hub-title">One Way Taxi From Surat (Gujarat)</div>
+    <div class="payal-routes-grid">
+      <div class="payal-route-link" onclick="openExactRoute('Surat to Mumbai', 280, 2899, 3499, 4999)">Surat to Mumbai Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Surat to Ahmedabad', 260, 2699, 3199, 4599)">Surat to Ahmedabad Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Surat to Vadodara', 150, 1899, 2299, 3299)">Surat to Vadodara Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Surat to Pune', 410, 4899, 5499, 7699)">Surat to Pune Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Surat to Nashik', 240, 2599, 3099, 4399)">Surat to Nashik Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Surat to Shirdi', 320, 3499, 3999, 5699)">Surat to Shirdi Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Surat to Vapi', 120, 1699, 1999, 2899)">Surat to Vapi Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Surat to Navsari', 40, 999, 1299, 1899)">Surat to Navsari Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Surat to Ankleshwar', 70, 1399, 1699, 2399)">Surat to Ankleshwar Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Surat to Bharuch', 80, 1499, 1799, 2499)">Surat to Bharuch Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Surat to Daman', 120, 1799, 2199, 3099)">Surat to Daman Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Surat to Dahej', 130, 1999, 2399, 3399)">Surat to Dahej Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Surat to Rajkot', 440, 4699, 5399, 7499)">Surat to Rajkot Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Surat to Bhavnagar', 360, 3999, 4599, 6499)">Surat to Bhavnagar Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Surat to Statue of Unity', 155, 2199, 2599, 3699)">Surat to Statue of Unity Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Surat to Indore', 440, 5299, 6099, 8499)">Surat to Indore Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Surat to Udaipur', 500, 5699, 6499, 9199)">Surat to Udaipur Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Surat to Thane', 260, 2799, 3299, 4699)">Surat to Thane Cab</div>
+    </div>
+
+    <!-- Category: From Vadodara -->
+    <div class="payal-hub-title">One Way Taxi From Vadodara (Gujarat)</div>
+    <div class="payal-routes-grid">
+      <div class="payal-route-link" onclick="openExactRoute('Vadodara to Ahmedabad', 110, 1699, 1999, 2899)">Vadodara to Ahmedabad Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Vadodara to Surat', 150, 1899, 2299, 3299)">Vadodara to Surat Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Vadodara to Mumbai', 410, 4599, 5199, 7299)">Vadodara to Mumbai Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Vadodara to Statue of Unity', 90, 1499, 1799, 2599)">Vadodara to Statue of Unity Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Vadodara to Anand', 45, 1099, 1299, 1799)">Vadodara to Anand Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Vadodara to Bharuch', 75, 1399, 1699, 2399)">Vadodara to Bharuch Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Vadodara to Ankleshwar', 85, 1499, 1799, 2499)">Vadodara to Ankleshwar Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Vadodara to Dahej', 130, 1899, 2299, 3199)">Vadodara to Dahej Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Vadodara to Godhra', 60, 1299, 1499, 2199)">Vadodara to Godhra Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Vadodara to Shirdi', 420, 4899, 5499, 7699)">Vadodara to Shirdi Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Vadodara to Pune', 540, 5999, 6799, 9499)">Vadodara to Pune Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Vadodara to Indore', 340, 4299, 4899, 6899)">Vadodara to Indore Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Vadodara to Udaipur', 340, 4199, 4799, 6699)">Vadodara to Udaipur Cab</div>
+    </div>
+
+    <!-- Category: From Mumbai -->
+    <div class="payal-hub-title">One Way Taxi From Mumbai (Maharashtra)</div>
+    <div class="payal-routes-grid">
+      <div class="payal-route-link" onclick="openExactRoute('Mumbai to Pune', 150, 2099, 2499, 3699)">Mumbai to Pune Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Mumbai to Surat', 280, 2899, 3499, 4999)">Mumbai to Surat Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Mumbai to Nashik', 170, 2299, 2699, 3899)">Mumbai to Nashik Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Mumbai to Shirdi', 240, 2899, 3399, 4799)">Mumbai to Shirdi Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Mumbai to Lonavala', 90, 1599, 1899, 2699)">Mumbai to Lonavala Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Mumbai to Mahabaleshwar', 260, 3499, 3999, 5699)">Mumbai to Mahabaleshwar Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Mumbai to Ahmedabad', 530, 5699, 6499, 8999)">Mumbai to Ahmedabad Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Mumbai to Vadodara', 410, 4599, 5199, 7299)">Mumbai to Vadodara Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Mumbai to Goa', 590, 8499, 9599, 13499)">Mumbai to Goa Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Mumbai to Vapi', 160, 2199, 2599, 3699)">Mumbai to Vapi Cab</div>
+    </div>
+
+    <!-- Category: From Rajkot -->
+    <div class="payal-hub-title">One Way Taxi From Rajkot (Gujarat)</div>
+    <div class="payal-routes-grid">
+      <div class="payal-route-link" onclick="openExactRoute('Rajkot to Ahmedabad', 215, 2499, 2899, 4199)">Rajkot to Ahmedabad Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Rajkot to Jamnagar', 90, 1499, 1799, 2599)">Rajkot to Jamnagar Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Rajkot to Somnath', 200, 2599, 2999, 4299)">Rajkot to Somnath Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Rajkot to Dwarka', 230, 2899, 3399, 4799)">Rajkot to Dwarka Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Rajkot to Junagadh', 105, 1699, 1999, 2799)">Rajkot to Junagadh Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Rajkot to Bhuj', 230, 2899, 3399, 4799)">Rajkot to Bhuj Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Rajkot to Morbi', 65, 1299, 1499, 2199)">Rajkot to Morbi Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Rajkot to Surat', 440, 4699, 5399, 7499)">Rajkot to Surat Cab</div>
+      <div class="payal-route-link" onclick="openExactRoute('Rajkot to Vadodara', 280, 3199, 3699, 5199)">Rajkot to Vadodara Cab</div>
+    </div>
+
+  </div> <!-- End of routesPageView -->
+
+
+  <!-- ===== PAYALCAB EXACT CAR MODAL POPUP ===== -->
+  <div id="exactPayalModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:99999; overflow-y:auto; padding:15px;">
+    <div style="background:#181818; max-width:550px; margin:20px auto; border-radius:12px; border:2px solid #00e676; padding:20px; position:relative; color:white;">
+      <button onclick="closeExactModal()" style="position:absolute; right:12px; top:12px; width:34px; height:34px; border-radius:50%; background:#ff4444; color:white; border:none; font-weight:bold; cursor:pointer;">✕</button>
+      
+      <h3 id="epModalTitle" style="color:#00e676; font-size:18px; margin-bottom:5px;">Route Taxi for One Way Trip</h3>
+      <p style="color:#aaa; font-size:12px; margin-bottom:15px;">Guaranteed Lowest One-Way Fare with Verified Driver</p>
+
+      <!-- Hatchback -->
+      <div style="background:#222; border:1px solid #333; border-radius:8px; padding:12px; margin-bottom:15px; text-align:center;">
+        <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=350&q=80" style="width:170px; height:95px; object-fit:contain; margin-bottom:8px;" alt="Hatchback">
+        <table style="width:100%; font-size:13px; margin:8px 0; border-collapse:collapse;">
+          <tr><td style="text-align:left; color:#888; padding:5px; border-bottom:1px solid #333;">Cab Type:</td><td style="text-align:right; font-weight:bold; border-bottom:1px solid #333;">AC HATCHBACK</td></tr>
+          <tr><td style="text-align:left; color:#888; padding:5px; border-bottom:1px solid #333;">Cab Rate:</td><td style="text-align:right; font-weight:bold; color:#00e676; border-bottom:1px solid #333;" id="epHatchRate">₹0</td></tr>
+          <tr><td style="text-align:left; color:#888; padding:5px; border-bottom:1px solid #333;">Included KM:</td><td style="text-align:right; font-weight:bold; border-bottom:1px solid #333;" id="epHatchKM">0 KM</td></tr>
+          <tr><td style="text-align:left; color:#888; padding:5px; border-bottom:1px solid #333;">Extra KM Rate:</td><td style="text-align:right; border-bottom:1px solid #333;">₹11 / KM</td></tr>
+          <tr><td style="text-align:left; color:#888; padding:5px; border-bottom:1px solid #333;">Available Cars:</td><td style="text-align:right; border-bottom:1px solid #333;">WagonR, Tiago, Celerio</td></tr>
+          <tr><td style="text-align:left; color:#888; padding:5px;">Capacity:</td><td style="text-align:right;">👤 4 Seats | 🧳 2 Bags</td></tr>
+        </table>
+        <a id="epHatchBtn" href="#" target="_blank" style="background:#00e676; color:#000; display:block; padding:9px; text-decoration:none; font-weight:bold; border-radius:6px; margin-top:6px;">Confirm on WhatsApp</a>
+      </div>
+
+      <!-- Sedan -->
+      <div style="background:#222; border:1px solid #333; border-radius:8px; padding:12px; margin-bottom:15px; text-align:center;">
+        <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=350&q=80" style="width:170px; height:95px; object-fit:contain; margin-bottom:8px;" alt="Sedan">
+        <table style="width:100%; font-size:13px; margin:8px 0; border-collapse:collapse;">
+          <tr><td style="text-align:left; color:#888; padding:5px; border-bottom:1px solid #333;">Cab Type:</td><td style="text-align:right; font-weight:bold; border-bottom:1px solid #333;">AC SEDAN</td></tr>
+          <tr><td style="text-align:left; color:#888; padding:5px; border-bottom:1px solid #333;">Cab Rate:</td><td style="text-align:right; font-weight:bold; color:#00e676; border-bottom:1px solid #333;" id="epSedanRate">₹0</td></tr>
+          <tr><td style="text-align:left; color:#888; padding:5px; border-bottom:1px solid #333;">Included KM:</td><td style="text-align:right; font-weight:bold; border-bottom:1px solid #333;" id="epSedanKM">0 KM</td></tr>
+          <tr><td style="text-align:left; color:#888; padding:5px; border-bottom:1px solid #333;">Extra KM Rate:</td><td style="text-align:right; border-bottom:1px solid #333;">₹13 / KM</td></tr>
+          <tr><td style="text-align:left; color:#888; padding:5px; border-bottom:1px solid #333;">Available Cars:</td><td style="text-align:right; border-bottom:1px solid #333;">Dzire, Etios, Amaze</td></tr>
+          <tr><td style="text-align:left; color:#888; padding:5px;">Capacity:</td><td style="text-align:right;">👤 4 Seats | 🧳 3 Bags</td></tr>
+        </table>
+        <a id="epSedanBtn" href="#" target="_blank" style="background:#00e676; color:#000; display:block; padding:9px; text-decoration:none; font-weight:bold; border-radius:6px; margin-top:6px;">Confirm on WhatsApp</a>
+      </div>
+
+      <!-- SUV -->
+      <div style="background:#222; border:1px solid #333; border-radius:8px; padding:12px; text-align:center;">
+        <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=350&q=80" style="width:170px; height:95px; object-fit:contain; margin-bottom:8px;" alt="SUV">
+        <table style="width:100%; font-size:13px; margin:8px 0; border-collapse:collapse;">
+          <tr><td style="text-align:left; color:#888; padding:5px; border-bottom:1px solid #333;">Cab Type:</td><td style="text-align:right; font-weight:bold; border-bottom:1px solid #333;">AC SUV</td></tr>
+          <tr><td style="text-align:left; color:#888; padding:5px; border-bottom:1px solid #333;">Cab Rate:</td><td style="text-align:right; font-weight:bold; color:#00e676; border-bottom:1px solid #333;" id="epSuvRate">₹0</td></tr>
+          <tr><td style="text-align:left; color:#888; padding:5px; border-bottom:1px solid #333;">Included KM:</td><td style="text-align:right; font-weight:bold; border-bottom:1px solid #333;" id="epSuvKM">0 KM</td></tr>
+          <tr><td style="text-align:left; color:#888; padding:5px; border-bottom:1px solid #333;">Extra KM Rate:</td><td style="text-align:right; border-bottom:1px solid #333;">₹18 / KM</td></tr>
+          <tr><td style="text-align:left; color:#888; padding:5px; border-bottom:1px solid #333;">Available Cars:</td><td style="text-align:right; border-bottom:1px solid #333;">Ertiga, Innova, Carens</td></tr>
+          <tr><td style="text-align:left; color:#888; padding:5px;">Capacity:</td><td style="text-align:right;">👤 6+1 Seats | 🧳 5 Bags</td></tr>
+        </table>
+        <a id="epSuvBtn" href="#" target="_blank" style="background:#00e676; color:#000; display:block; padding:9px; text-decoration:none; font-weight:bold; border-radius:6px; margin-top:6px;">Confirm on WhatsApp</a>
+      </div>
+
+    </div>
   </div>
 
-  <div class="about-category">
-    <h4>Special Occasions</h4>
-    <ul>
-      <li>Luxury transportation for weddings and events</li>
-      <li>Decorated vehicles</li>
-      <li>Bridal packages</li>
-      <li>Multiple vehicle coordination</li>
-    </ul>
-  </div>
+  <script>
+    // POPUP CALL-BACK FORM SCRIPT
+    function openForm() {
+      document.getElementById('popupForm').style.display = 'block';
+    }
 
-  <div class="about-category">
-    <h4>City Tours</h4>
-    <ul>
-      <li>Explore Mumbai with our knowledgeable drivers</li>
-      <li>Half-day and full-day packages</li>
-      <li>Multi-lingual drivers</li>
-      <li>Customizable itineraries</li>
-    </ul>
-  </div>
+    function closeForm() {
+      document.getElementById('popupForm').style.display = 'none';
+    }
 
-  <h3>Why Choose Us?</h3>
+    function sendWhatsAppMessage() {
+      const name = document.getElementById('popupName').value.trim();
+      const phone = document.getElementById('popupPhone').value.trim();
+      const yourNumber = "919726662197";
 
-  <div class="about-category">
-    <h4>No Hidden Costs</h4>
-    <p>All-inclusive pricing with no surprise charges. We provide detailed quotes upfront with breakdown of all costs including tolls, parking and waiting time.</p>
-  </div>
+      if (name === "" || phone === "") {
+        alert("Please fill in both fields.");
+        return;
+      }
 
-  <div class="about-category">
-    <h4>Experienced Team</h4>
-    <p>Our drivers average 8+ years of driving experience with extensive local knowledge and defensive driving certifications.</p>
-  </div>
+      const message = `Hello, I am ${name}. Please call me back on ${phone}.`;
+      const whatsappUrl = `https://wa.me/${yourNumber}?text=${encodeURIComponent(message)}`;
 
-  <div class="about-category">
-    <h4>Customized Services</h4>
-    <p>From child seats to special accessibility needs, we tailor every aspect of your ride. Our concierge team coordinates special requests.</p>
-  </div>
+      window.open(whatsappUrl, "_blank");
+      closeForm();
+    }
 
-  <div class="about-category">
-    <h4>Punctuality</h4>
-    <p>98% on-time performance with real-time tracking and proactive communication if any delays occur due to unforeseen circumstances.</p>
-  </div>
+    // MENU TOGGLE SCRIPT
+    function toggleMenu() {
+      const navMenu = document.getElementById("navMenu");
+      navMenu.classList.toggle("active");
+    }
 
-  <div class="about-category">
-    <h4>Well-Maintained Fleet</h4>
-    <p>All vehicles undergo 150-point inspections weekly. We maintain a diverse fleet from economy sedans to luxury SUVs, all less than 3 years old.</p>
-  </div>
+    document.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll(".nav-menu a");
+      const navMenu = document.getElementById("navMenu");
+      links.forEach(link => {
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("active");
+        });
+      });
+    });
 
-  <h3>Our Commitment</h3>
-  <p>
-    We are committed to providing safe, comfortable, and enjoyable travel experiences at pocket-friendly rates.
- All our services adhere to industry standards and are supervised by our tourism experts to ensure your complete satisfaction.
-    </p>
-  </div>
-</body>
-</html>
-<section id="contact" style="text-align:center; padding:30px; background-color:#000; color:white;">
-  <h2 style="margin-bottom:15px;">Contact Us</h2>
+    // ONE-WAY BOOKING
+    function sendWhatsApp() {
+      const name = document.getElementById('custName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      const pickup = document.getElementById('pickup').value.trim();
+      const drop = document.getElementById('drop').value.trim();
+      const travelDate = document.getElementById('travelDate').value.trim();
+      const travelTime = document.getElementById('travelTime').value.trim();
 
-  <div style="margin-top:15px;">
-    <!-- Call -->
-    <a href="tel:+919726662197" target="_blank" style="margin:10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png"
-     width="35" height="35" alt="Call" style="filter: invert(81%) sepia(38%) saturate(707%) hue-rotate(74deg) brightness(95%) contrast(92%);">
-    </a>
+      const message =
+          `*🚖 Nirmal Cab Booking Request 🚖*\n` +
+          `------------------------------\n` +
+          `*Name:* ${name}\n` +
+          `*Phone:* ${phone}\n` +
+          `*Pickup City:* ${pickup}\n` +
+          `*Drop City:* ${drop}\n` +
+          `*Travel Date:* ${travelDate}\n` +
+          `*Travel Time:* ${travelTime}\n` +
+          `------------------------------`;
 
-    <!-- WhatsApp -->
-    <a href="https://wa.me/919726662197" target="_blank" style="margin:10px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-           width="40" height="40" alt="WhatsApp">
-    </a>
+      const whatsappURL = "https://wa.me/919726662197?text=" + encodeURIComponent(message);
+      window.open(whatsappURL, "_blank");
+    }
 
-    <!-- Facebook -->
-    <a href="https://www.facebook.com/share/1BrqXkb1ZU/ target="_blank" style="margin:10px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg"
-           width="40" height="40" alt="Facebook">
-    </a>
+    // POPULAR CAR SECTION BOOKING
+    function sendCarBooking(carName) {
+      const name = document.getElementById('custName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      const travelDate = document.getElementById('travelDate').value.trim();
 
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/nirmalcab.in?igsh=cW9kbm1tNWRpNDJs" target="_blank" style="margin:10px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-           width="40" height="40" alt="Instagram">
-    </a>
-  </div>
-</section>
-<script>
-function sendCarBooking(carName) {
-  const name = document.getElementById('custName').value.trim();
-  const phone = document.getElementById('custPhone').value.trim();
-  const travelDate = document.getElementById('travelDate').value.trim();
+      if (!name || !phone || !travelDate) {
+        alert("Please fill your name, phone number, and travel date in the form.");
+        return;
+      }
 
-  if (!name || !phone || !travelDate) {
-    alert("Please fill your name, phone number, and travel date in the form.");
-    return;
-  }
+      const message = `*🚖 Nirmal Cab Booking Request 🚖*\n----------------------------\n*Car:* ${carName}\n*Name:* ${name}\n*Phone:* ${phone}\n*Travel Date:* ${travelDate}\n----------------------------`;
+      const whatsappURL = "https://wa.me/919726662197?text=" + encodeURIComponent(message);
+      window.open(whatsappURL, "_blank");
+    }
 
-  const message = `*🚖 Nirmal Cab Booking Request 🚖*
-----------------------------
-*Car:* ${carName}
-*Name:* ${name}
-*Phone:* ${phone}
-*Travel Date:* ${travelDate}
-----------------------------`;
+    // TRIP SELECTOR TAB SWITCHING
+    function showForm(type) {
+      const oneWayForm = document.getElementById("oneWayForm");
+      const roundTripForm = document.getElementById("roundTripForm");
+      const airportForm = document.getElementById("airportForm");
 
-  const whatsappURL = "https://wa.me/919726662197?text=" + encodeURIComponent(message);
-  window.open(whatsappURL, "_blank");
-}
+      if (type === "round") {
+        oneWayForm.style.display = "none";
+        roundTripForm.style.display = "block";
+        airportForm.style.display = "none";
+      } else if (type === "airport") {
+        oneWayForm.style.display = "none";
+        roundTripForm.style.display = "none";
+        airportForm.style.display = "block";
+      } else {
+        oneWayForm.style.display = "block";
+        roundTripForm.style.display = "none";
+        airportForm.style.display = "none";
+      }
+    }
 
-function showForm(type){
+    // ROUND TRIP STOPS
+    function addStop() {
+      const container = document.getElementById("stopContainer");
+      const stopDiv = document.createElement("div");
+      stopDiv.style.display = "flex";
+      stopDiv.style.gap = "5px";
+      stopDiv.style.marginTop = "10px";
 
-const oneWayForm =
-document.getElementById("oneWayForm");
+      const input = document.createElement("input");
+      input.setAttribute("list", "cities");
+      input.placeholder = "Enter Stop City";
+      input.className = "stop-input";
 
-const roundTripForm =
-document.getElementById("roundTripForm");
+      const removeBtn = document.createElement("button");
+      removeBtn.innerHTML = "❌";
+      removeBtn.style.width = "50px";
+      removeBtn.style.marginTop = "5px";
+      removeBtn.onclick = function() {
+        stopDiv.remove();
+      };
 
-const airportForm =
-document.getElementById("airportForm");
+      stopDiv.appendChild(input);
+      stopDiv.appendChild(removeBtn);
+      container.appendChild(stopDiv);
+    }
 
-if(type==="round"){
+    function sendRoundTripWhatsApp() {
+      let stopsText = "";
+      document.querySelectorAll(".stop-input").forEach((stop, index) => {
+        if (stop.value.trim() !== "") {
+          stopsText += `Stop ${index + 1}: ${stop.value}\n`;
+        }
+      });
 
-oneWayForm.style.display="none";
-roundTripForm.style.display="block";
-airportForm.style.display="none";
-
-}
-
-else if(type==="airport"){
-
-oneWayForm.style.display="none";
-roundTripForm.style.display="none";
-airportForm.style.display="block";
-
-}
-
-else{
-
-oneWayForm.style.display="block";
-roundTripForm.style.display="none";
-airportForm.style.display="none";
-
-}
-
-}
-
-function addStop(){
-
-const container =
-document.getElementById("stopContainer");
-
-const stopDiv =
-document.createElement("div");
-
-stopDiv.style.display = "flex";
-stopDiv.style.gap = "5px";
-stopDiv.style.marginTop = "10px";
-
-const input =
-document.createElement("input");
-
-input.setAttribute("list","cities");
-
-input.placeholder = "Enter Stop City";
-
-input.className = "stop-input";
-
-const removeBtn =
-document.createElement("button");
-
-removeBtn.innerHTML = "❌";
-
-removeBtn.style.width = "50px";
-
-removeBtn.onclick = function(){
-stopDiv.remove();
-};
-
-stopDiv.appendChild(input);
-stopDiv.appendChild(removeBtn);
-
-container.appendChild(stopDiv);
-
-}
-
-function sendRoundTripWhatsApp(){
-let stopsText = "";
-
-document.querySelectorAll(".stop-input").forEach((stop, index) => {
-  if (stop.value.trim() !== "") {
-    stopsText += `Stop ${index + 1}: ${stop.value}\n`;
-  }
-});
-
-const message =
+      const message =
 `🚖 Round Trip Booking
 
 Name: ${document.getElementById("rtName").value}
-
 Phone: ${document.getElementById("rtPhone").value}
-
 Pickup: ${document.getElementById("rtPickup").value}
-
 Drop: ${document.getElementById("rtDrop").value}
-${stopsText}
-Pickup Date: ${document.getElementById("rtPickupDate").value}
-
+${stopsText}Pickup Date: ${document.getElementById("rtPickupDate").value}
 Pickup Time: ${document.getElementById("rtPickupTime").value}
-
 Drop Date: ${document.getElementById("rtDropDate").value}
-
 Drop Time: ${document.getElementById("rtDropTime").value}`;
 
-window.open(
-"https://wa.me/919726662197?text="+
-encodeURIComponent(message),
-"_blank"
-);
+      window.open("https://wa.me/919726662197?text=" + encodeURIComponent(message), "_blank");
+    }
 
-}
-function changeAirportType(type){
+    // AIRPORT TRIP TYPE TOGGLE
+    function changeAirportType(type) {
+      const label1 = document.getElementById("airportLabel1");
+      const label2 = document.getElementById("airportLabel2");
+      const field1 = document.getElementById("airportFrom");
+      const field2 = document.getElementById("airportTo");
 
-const label1 =
-document.getElementById("airportLabel1");
+      if (type === "to") {
+        label1.innerHTML = "From City:";
+        label2.innerHTML = "Airport:";
+        field1.placeholder = "Enter Pickup City";
+        field2.placeholder = "Enter Airport Name";
+      } else {
+        label1.innerHTML = "Airport:";
+        label2.innerHTML = "To City:";
+        field1.placeholder = "Enter Airport Name";
+        field2.placeholder = "Enter Destination City";
+      }
+    }
 
-const label2 =
-document.getElementById("airportLabel2");
+    function sendAirportWhatsApp() {
+      const tripType = document.querySelector('input[name="airportTrip"]:checked').parentElement.innerText;
+      const from = document.getElementById("airportFrom").value;
+      const to = document.getElementById("airportTo").value;
+      const date = document.getElementById("airportDate").value;
+      const time = document.getElementById("airportTime").value;
 
-const field1 =
-document.getElementById("airportFrom");
-
-const field2 =
-document.getElementById("airportTo");
-
-if(type==="to"){
-
-label1.innerHTML = "From City:";
-label2.innerHTML = "Airport:";
-
-field1.placeholder =
-"Enter Pickup City";
-
-field2.placeholder =
-"Enter Airport Name";
-
-}
-
-else{
-
-label1.innerHTML = "Airport:";
-label2.innerHTML = "To City:";
-
-field1.placeholder =
-"Enter Airport Name";
-
-field2.placeholder =
-"Enter Destination City";
-
-}
-
-}
-function sendAirportWhatsApp(){
-
-const tripType =
-document.querySelector(
-'input[name="airportTrip"]:checked'
-).parentElement.innerText;
-
-const from =
-document.getElementById("airportFrom").value;
-
-const to =
-document.getElementById("airportTo").value;
-
-const date =
-document.getElementById("airportDate").value;
-
-const time =
-document.getElementById("airportTime").value;
-
-const message =
-
-`✈ Airport Booking
+      const message =
+      `✈ Airport Booking
 
 Trip Type: ${tripType}
-
 From: ${from}
-
 To: ${to}
-
 Pickup Date: ${date}
-
 Pickup Time: ${time}`;
 
-window.open(
-"https://wa.me/919726662197?text=" +
-encodeURIComponent(message),
-"_blank"
-);
+      window.open("https://wa.me/919726662197?text=" + encodeURIComponent(message), "_blank");
+    }
 
-}
-</script>
+    // ===== PAYALCAB EXACT VIEW CONTROLLER SCRIPT =====
+    const WA_PHONE_NUM = "919726662197";
+
+    function showRoutesPageView() {
+      document.getElementById("homeMainView").style.display = "none";
+      document.getElementById("routesPageView").style.display = "block";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      const navMenu = document.getElementById("navMenu");
+      if (navMenu) navMenu.classList.remove("active");
+    }
+
+    function showHomePageView() {
+      document.getElementById("routesPageView").style.display = "none";
+      document.getElementById("homeMainView").style.display = "block";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      const navMenu = document.getElementById("navMenu");
+      if (navMenu) navMenu.classList.remove("active");
+    }
+
+    function openExactRoute(title, km, hFare, sFare, suvFare) {
+      document.getElementById("epModalTitle").innerText = `${title} Taxi for One Way Trip`;
+
+      document.getElementById("epHatchRate").innerText = `Rs ${hFare}`;
+      document.getElementById("epHatchKM").innerText = `${km} KM`;
+      document.getElementById("epHatchBtn").href = `https://wa.me/${WA_PHONE_NUM}?text=${encodeURIComponent(`*🚖 Nirmal Cab Booking Request*\n*Route:* ${title}\n*Cab Type:* AC Hatchback\n*Fare:* Rs ${hFare}\n*Included KM:* ${km} KM`)}`;
+
+      document.getElementById("epSedanRate").innerText = `Rs ${sFare}`;
+      document.getElementById("epSedanKM").innerText = `${km} KM`;
+      document.getElementById("epSedanBtn").href = `https://wa.me/${WA_PHONE_NUM}?text=${encodeURIComponent(`*🚖 Nirmal Cab Booking Request*\n*Route:* ${title}\n*Cab Type:* AC Sedan\n*Fare:* Rs ${sFare}\n*Included KM:* ${km} KM`)}`;
+
+      document.getElementById("epSuvRate").innerText = `Rs ${suvFare}`;
+      document.getElementById("epSuvKM").innerText = `${km} KM`;
+      document.getElementById("epSuvBtn").href = `https://wa.me/${WA_PHONE_NUM}?text=${encodeURIComponent(`*🚖 Nirmal Cab Booking Request*\n*Route:* ${title}\n*Cab Type:* AC SUV\n*Fare:* Rs ${suvFare}\n*Included KM:* ${km} KM`)}`;
+
+      document.getElementById("exactPayalModal").style.display = "block";
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeExactModal() {
+      document.getElementById("exactPayalModal").style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+
+    window.addEventListener('click', function(e) {
+      const modal = document.getElementById("exactPayalModal");
+      if (e.target === modal) {
+        closeExactModal();
+      }
+    });
+  </script>
+</body>
+</html>
