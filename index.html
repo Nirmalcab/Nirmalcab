@@ -964,6 +964,10 @@
       <p>Nirmal Cab provides one side taxi from one city to another. We provide Instant Confirmation on below mentioned routes. Why pay for return fare if you are traveling one side only?</p>
       <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=600&q=80" alt="Taxi Routes Banner">
     </div>
+    <!-- ===== LIVE SEARCH BOX ===== -->
+<div style="margin: 20px 0; text-align: center;">
+  <input type="text" id="routeLiveSearch" onkeyup="filterRoutesList()" placeholder="🔍 Search route (e.g. Surat to Mumbai, Ahmedabad to Jodhpur)..." style="width: 100%; max-width: 100%; padding: 14px 18px; font-size: 16px; border-radius: 8px; border: 2px solid #00e676; background: #181818; color: #ffffff; outline: none; box-sizing: border-box;">
+</div>
 <!-- One Way Taxi From Ahmedabad (Gujarat) -->
 <div class="payal-hub-title">One Way Taxi From Ahmedabad (Gujarat)</div>
 <div class="payal-routes-grid">
@@ -6827,6 +6831,46 @@ Pickup Time: ${time}`;
         closeExactModal();
       }
     });
+    // ===== PERFECT LIVE SEARCH SCRIPT =====
+function filterRoutesList() {
+  let input = document.getElementById('routeLiveSearch').value.toLowerCase().trim();
+  let routeLinks = document.querySelectorAll('.payal-route-link');
+  let hubTitles = document.querySelectorAll('.payal-hub-title');
+
+  // Agar search box khali hai, toh sabhi routes aur titles wapas dikha do
+  if (input === "") {
+    routeLinks.forEach(link => link.style.display = "block");
+    hubTitles.forEach(title => title.style.display = "block");
+    let allGrids = document.querySelectorAll('.payal-routes-grid');
+    allGrids.forEach(grid => grid.style.display = "grid");
+    return;
+  }
+
+  // Har route ko check karein ki wo match ho raha hai ya nahi
+  routeLinks.forEach(link => {
+    let text = link.innerText.toLowerCase();
+    if (text.includes(input)) {
+      link.style.display = "block";
+    } else {
+      link.style.display = "none";
+    }
+  });
+
+  // Check karein ki kis hub ke andar matching routes bache hain
+  hubTitles.forEach(title => {
+    let nextGrid = title.nextElementSibling;
+    if (nextGrid && nextGrid.classList.contains('payal-routes-grid')) {
+      let visibleLinks = nextGrid.querySelectorAll('.payal-route-link:not([style*="display: none"])');
+      if (visibleLinks.length > 0) {
+        title.style.display = "block";
+        nextGrid.style.display = "grid";
+      } else {
+        title.style.display = "none";
+        nextGrid.style.display = "none";
+      }
+    }
+  });
+}
   </script>
 </body>
 </html>
