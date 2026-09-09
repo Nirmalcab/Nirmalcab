@@ -9058,7 +9058,42 @@ function filterRoutesList() {
         nextGrid.style.display = "none";
       }
     }
+    });
+}
+// ===== HOME PAGE INSTANT SEARCH SCRIPT =====
+function filterHomeRoutes() {
+  let input = document.getElementById('homeRouteSearch').value.toLowerCase().trim();
+  let resultsContainer = document.getElementById('homeSearchResults');
+  
+  if (input === "") {
+    resultsContainer.innerHTML = "";
+    resultsContainer.style.display = "none";
+    return;
+  }
+
+  // Saare routes jo aapne routes page par dale hain, unko yahan se dhoondhega
+  let routeLinks = document.querySelectorAll('#routesPageView .payal-route-link');
+  let matchedHtml = "";
+  let count = 0;
+
+  routeLinks.forEach(link => {
+    let text = link.innerText;
+    let onclickAttr = link.getAttribute('onclick'); // onclick function extract karega
+    
+    if (text.toLowerCase().includes(input) && count < 15) { // Maximum 15 results dikhayega
+      matchedHtml += `<div onclick="${onclickAttr}; document.getElementById('homeSearchResults').style.display='none';" style="padding: 10px 14px; color: #fff; border-bottom: 1px solid #333; cursor: pointer; font-size: 14px;">🚖 ${text}</div>`;
+      count++;
+    }
   });
+
+  if (matchedHtml !== "") {
+    resultsContainer.innerHTML = matchedHtml;
+    resultsContainer.style.display = "block";
+  } else {
+    resultsContainer.innerHTML = `<div style="padding: 10px; color: #aaa; text-align: center; font-size: 13px;">No route found. Try another city.</div>`;
+    resultsContainer.style.display = "block";
+  }
+}
   
   </script>
 </body>
