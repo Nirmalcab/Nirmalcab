@@ -671,8 +671,8 @@
     <button onclick="sendWhatsAppMessage()">Send via WhatsApp</button>
     <button onclick="closeForm()" style="margin-top:8px; background:#888; color:#fff;">Cancel</button>
   </div>
-  <!-- ===== HOME PAGE INSTANT ROUTE SEARCH BOX ===== -->
-<div style="max-width: 600px; margin: 15px auto; padding: 0 15px; position: relative; text-align: left;">
+  <!-- ===== HOME PAGE INSTANT ROUTE SEARCH BOX (UPDATED) ===== -->
+<div id="homeSearchWrapper" style="max-width: 600px; margin: 15px auto; padding: 0 15px; position: relative; text-align: left;">
   <div style="background: #181818; padding: 12px; border-radius: 10px; border: 2px solid #00e676; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
     <label style="color: #00e676; font-weight: bold; font-size: 14px; display: block; margin-bottom: 6px;">🔍 Instant Route & Price Check:</label>
     <input type="text" id="homeRouteSearch" onkeyup="filterHomeRoutes()" placeholder="Type route (e.g. Surat to Mumbai, Pune)..." style="width: 100%; padding: 12px 15px; font-size: 15px; border-radius: 6px; border: 1px solid #444; background: #222; color: #fff; outline: none; box-sizing: border-box;">
@@ -9071,8 +9071,8 @@ function filterRoutesList() {
       }
     }
   });
-}
-    // ===== HOME PAGE INSTANT SEARCH SCRIPT =====
+
+   // ===== HOME PAGE INSTANT SEARCH SCRIPT & PAGE CONTROLLER =====
 function filterHomeRoutes() {
   let input = document.getElementById('homeRouteSearch').value.toLowerCase().trim();
   let resultsContainer = document.getElementById('homeSearchResults');
@@ -9083,16 +9083,15 @@ function filterHomeRoutes() {
     return;
   }
 
-  // Saare routes jo aapne routes page par dale hain, unko yahan se dhoondhega
   let routeLinks = document.querySelectorAll('#routesPageView .payal-route-link');
   let matchedHtml = "";
   let count = 0;
 
   routeLinks.forEach(link => {
     let text = link.innerText;
-    let onclickAttr = link.getAttribute('onclick'); // onclick function extract karega
+    let onclickAttr = link.getAttribute('onclick');
     
-    if (text.toLowerCase().includes(input) && count < 15) { // Maximum 15 results dikhayega
+    if (text.toLowerCase().includes(input) && count < 15) {
       matchedHtml += `<div onclick="${onclickAttr}; document.getElementById('homeSearchResults').style.display='none';" style="padding: 10px 14px; color: #fff; border-bottom: 1px solid #333; cursor: pointer; font-size: 14px;">🚖 ${text}</div>`;
       count++;
     }
@@ -9105,6 +9104,18 @@ function filterHomeRoutes() {
     resultsContainer.innerHTML = `<div style="padding: 10px; color: #aaa; text-align: center; font-size: 13px;">No route found. Try another city.</div>`;
     resultsContainer.style.display = "block";
   }
+}
+
+// Yeh function check karega ki jab aap Routes ya Services page par jayein toh search box gayab ho jaye
+function hideHomeSearch() {
+  let searchBox = document.getElementById('homeSearchWrapper');
+  if(searchBox) searchBox.style.display = 'none';
+}
+
+// Yeh function check karega ki jab aap Home par wapas aayein toh search box wapas dikhe
+function showHomeSearch() {
+  let searchBox = document.getElementById('homeSearchWrapper');
+  if(searchBox) searchBox.style.display = 'block';
 }
   </script>
 </body>
